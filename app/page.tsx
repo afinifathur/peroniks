@@ -20,8 +20,8 @@ export default function Home() {
       <Hero />
 
       {/* Stats Section */}
-      <section className="bg-primary text-white py-12 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:14px_24px]" />
+      <section className="bg-slate-50 border-b border-slate-200 py-12 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:14px_24px]" />
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -30,10 +30,10 @@ export default function Home() {
               { value: "< 24 Jam", label: "Respon Penawaran", desc: "Cepat & Tepat Waktu" },
               { value: "100%", label: "Material Traceable", desc: "Dilengkapi Sertifikat MTC" },
             ].map((stat, i) => (
-              <div key={stat.label} className={`text-center ${i > 0 ? "md:border-l border-slate-700/50" : ""}`}>
-                <div className="font-technical-data text-3xl md:text-4xl text-accent font-extrabold mb-1">{stat.value}</div>
-                <div className="font-technical-data text-xs font-bold tracking-wider uppercase mb-1 text-slate-100">{stat.label}</div>
-                <div className="text-xs text-slate-400 font-body-md">{stat.desc}</div>
+              <div key={stat.label} className={`text-center ${i > 0 ? "md:border-l border-slate-200" : ""}`}>
+                <div className="font-technical-data text-3xl md:text-4xl text-[#0F172A] font-extrabold mb-1">{stat.value}</div>
+                <div className="font-technical-data text-xs font-bold tracking-wider uppercase mb-1 text-slate-600">{stat.label}</div>
+                <div className="text-xs text-slate-500 font-body-md">{stat.desc}</div>
               </div>
             ))}
           </div>
@@ -288,19 +288,19 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="bg-primary text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]" />
+      <section className="bg-slate-50 border-t border-slate-200 py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:24px_24px]" />
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Get a Quote Today</span>
-              <h2 className="font-technical-data text-3xl md:text-5xl text-white font-extrabold mt-2 mb-6 leading-[1.15]">
+              <h2 className="font-technical-data text-3xl md:text-5xl text-slate-900 font-extrabold mt-2 mb-6 leading-[1.15]">
                 Butuh Penawaran Harga Hari Ini?
               </h2>
-              <p className="font-body-lg text-sm text-slate-300 opacity-90 mb-8 leading-relaxed max-w-xl">
+              <p className="font-body-lg text-sm text-slate-600 mb-8 leading-relaxed max-w-xl">
                 Hubungi tim sales via WhatsApp untuk respon cepat, spesifikasi jelas, dan harga kompetitif. Kami menyediakan penawaran dalam format PDF resmi kurang dari 24 jam.
               </p>
-              <div className="space-y-4 mb-8 text-xs font-technical-data uppercase tracking-wider text-slate-300">
+              <div className="space-y-4 mb-8 text-xs font-technical-data uppercase tracking-wider text-slate-700">
                 <div className="flex items-center gap-3">
                   <span className="material-symbols-outlined text-accent">location_on</span>
                   <span>{siteConfig.address}</span>
@@ -323,12 +323,12 @@ export default function Home() {
                 <span className="material-symbols-outlined text-base">chat</span> Chat Sales via WhatsApp
               </a>
             </div>
-            <div className="bg-[#12284C]/50 border border-slate-700/60 rounded p-3 h-[380px] overflow-hidden shadow-2xl relative">
-              <div className="w-full h-full bg-slate-900/40 relative rounded overflow-hidden">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-slate-950/40 backdrop-blur-[2px]">
+            <div className="bg-white border border-slate-200 rounded p-3 h-[380px] overflow-hidden shadow-md relative">
+              <div className="w-full h-full bg-slate-100 relative rounded overflow-hidden">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-white/90 backdrop-blur-[1px]">
                   <span className="material-symbols-outlined text-5xl text-accent mb-4">map</span>
-                  <h4 className="font-technical-data text-sm font-bold text-white mb-2 uppercase tracking-wider">Lokasi Kantor &amp; Workshop</h4>
-                  <p className="text-slate-300 text-xs font-body-md mb-6 max-w-sm leading-relaxed">Terletak strategis di pusat manufaktur dan distribusi industri Indonesia.</p>
+                  <h4 className="font-technical-data text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider">Lokasi Kantor &amp; Workshop</h4>
+                  <p className="text-slate-600 text-xs font-body-md mb-6 max-w-sm leading-relaxed">Terletak strategis di pusat manufaktur dan distribusi industri Indonesia.</p>
                   <Link className="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-colors duration-200" href="/contact">
                     Buka Detail Kontak &amp; Peta
                   </Link>
@@ -337,7 +337,7 @@ export default function Home() {
                   alt="Map placeholder"
                   src="/images/cnc-machining.jpg"
                   fill
-                  className="object-cover opacity-20 grayscale"
+                  className="object-cover opacity-30 grayscale"
                 />
               </div>
             </div>
