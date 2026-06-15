@@ -12,95 +12,92 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-surface-bright py-10 border-b border-border-subtle">
+      <section className="bg-white py-16 border-b border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
-          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Tentang PERONIKS</h1>
-          <p className="text-body-lg text-on-surface-variant max-w-3xl">
-            PERONIKS adalah produsen dan supplier komponen perpipaan industrial: stainless steel flanges, pipe fittings,
-            ball valves, serta layanan custom CNC machining. Website ini difokuskan untuk kebutuhan teknis pabrik,
-            kontraktor, procurement, dan maintenance.
+          <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Company Profile</span>
+          <h1 className="font-technical-data text-3xl md:text-5xl text-primary font-extrabold mt-2 mb-4">Tentang PERONIKS</h1>
+          <p className="font-body-lg text-slate-500 max-w-3xl leading-relaxed text-sm md:text-base">
+            PERONIKS adalah produsen dan supplier komponen perpipaan industrial presisi tinggi di Indonesia. Kami memproduksi stainless steel flanges, pipe fittings, ball valves, serta menyediakan layanan custom CNC machining untuk kebutuhan engineering.
           </p>
         </div>
       </section>
 
-      <main className="max-w-container-max mx-auto px-gutter py-section-gap">
+      <main className="max-w-container-max mx-auto px-gutter py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7">
             <div className="space-y-8">
-              <section className="bg-white border border-border-subtle rounded-xl p-8">
-                <h2 className="font-headline-md text-headline-md mb-4">Fokus pada Spesifikasi dan Traceability</h2>
-                <p className="text-on-surface-variant font-body-md">
-                  Untuk proyek industri, kualitas bukan hanya tampilan. PERONIKS menekankan konsistensi dimensi, kontrol
-                  material, dan dokumentasi (MTC) agar komponen yang diterima sesuai kebutuhan engineering. Tim kami
-                  membantu mengurangi risiko mismatch standar (ANSI/JIS/ASME) dan kesalahan pemilihan rating.
+              <section className="bg-white border border-slate-200 rounded p-8 shadow-sm">
+                <h2 className="font-technical-data text-lg font-bold text-primary mb-4 uppercase tracking-wider">Fokus pada Spesifikasi &amp; Traceability</h2>
+                <p className="text-slate-500 font-body-md text-xs leading-relaxed">
+                  Pada instalasi piping industri, presisi dan ketahanan adalah segalanya. PERONIKS berkomitmen menghadirkan produk dengan toleransi dimensional yang ketat, sertifikasi material lengkap (MTC 3.1), serta pengujian kualitas komprehensif. Kami mendukung tim procurement dan engineering Anda menghindari mismatch standar dan kegagalan komponen di lapangan.
                 </p>
               </section>
 
-              <section className="bg-surface-container-low border border-border-subtle rounded-xl p-8">
-                <h3 className="font-headline-sm text-headline-sm mb-4 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary">verified</span> Nilai Utama
+              <section className="bg-slate-50 border border-slate-200 rounded p-8">
+                <h3 className="font-technical-data text-base font-bold text-primary mb-6 uppercase tracking-wider flex items-center gap-2">
+                  <span className="material-symbols-outlined text-accent text-xl">verified</span> Nilai Utama Kami
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
-                    { title: "Engineering-first", desc: "Spesifikasi jelas, siap dibahas secara teknis." },
-                    { title: "Quality & Inspection", desc: "Pengecekan dimensi dan material sesuai requirement." },
-                    { title: "Fast response", desc: "Respon RFQ cepat untuk kebutuhan procurement." },
-                    { title: "Reliable delivery", desc: "Pengiriman terjadwal untuk proyek dan kebutuhan pabrik." },
+                    { title: "Engineering-First Approach", desc: "Setiap spesifikasi diverifikasi secara teknis sebelum tahap produksi." },
+                    { title: "Quality Control & Inspection", desc: "Uji komposisi kimia (PMI) dan audit visual dimensi lengkap." },
+                    { title: "Fast RFQ Response", desc: "Estimasi harga & formal penawaran dikirim dalam waktu kurang dari 24 jam." },
+                    { title: "Reliable Distribution", desc: "Logistik terpercaya untuk pengiriman tepat waktu ke seluruh Indonesia." },
                   ].map((x) => (
-                    <div key={x.title} className="bg-white border border-border-subtle rounded-lg p-5">
-                      <div className="font-body-md font-bold mb-1">{x.title}</div>
-                      <div className="text-on-surface-variant text-sm">{x.desc}</div>
+                    <div key={x.title} className="bg-white border border-slate-200 rounded p-5">
+                      <div className="font-technical-data text-xs font-bold text-primary mb-2 uppercase tracking-wider">{x.title}</div>
+                      <p className="text-slate-500 text-xs font-body-md leading-relaxed">{x.desc}</p>
                     </div>
                   ))}
                 </div>
               </section>
 
-              <section className="bg-white border border-border-subtle rounded-xl p-8">
-                <h3 className="font-headline-sm text-headline-sm mb-4">Butuh Penawaran atau Konsultasi?</h3>
-                <p className="text-on-surface-variant font-body-md mb-6">
-                  Kirim spesifikasi (DN/NPS, class/PN, standard, material, qty) agar tim kami bisa siapkan penawaran dan
-                  rekomendasi teknis.
+              <section className="bg-white border border-slate-200 rounded p-8 shadow-sm">
+                <h3 className="font-technical-data text-base font-bold text-primary mb-3 uppercase tracking-wider">Butuh Penawaran Skala Proyek?</h3>
+                <p className="text-slate-500 font-body-md text-xs leading-relaxed mb-6">
+                  Kirimkan detail spesifikasi teknis kebutuhan proyek Anda (DN/NPS, standard flange, pressure class, material type, dan quantity) untuk mendapatkan penawaran PDF resmi dari tim sales kami.
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 bg-primary text-on-primary px-6 py-3 rounded-lg font-body-md font-semibold hover:opacity-90 transition-all active:scale-95"
+                  className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow-lg shadow-accent/20"
                 >
-                  Hubungi Kami <span className="material-symbols-outlined">arrow_forward</span>
+                  Hubungi Sales Engineer <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
               </section>
             </div>
           </div>
 
           <aside className="lg:col-span-5 space-y-8">
-            <div className="rounded-2xl overflow-hidden border border-border-subtle bg-surface-container-low">
-              <div className="aspect-[4/3] relative">
+            <div className="rounded border border-slate-200 bg-white overflow-hidden shadow-sm p-3">
+              <div className="aspect-[4/3] relative rounded overflow-hidden mb-4 border border-slate-100">
                 <Image src="/images/industrial-warehouse.jpg" alt="Factory" fill className="object-cover" />
               </div>
-              <div className="p-6">
-                <div className="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">
-                  Manufacturing & Supply
+              <div className="p-4">
+                <div className="font-technical-data text-[10px] text-accent font-bold uppercase tracking-wider mb-2">
+                  Workshop &amp; Logistik
                 </div>
-                <div className="font-body-md font-bold mb-1">{siteConfig.address}</div>
-                <div className="text-sm text-on-surface-variant">
-                  Fokus pada kebutuhan pabrik, kontraktor, procurement, maintenance, dan engineering company di Indonesia.
-                </div>
+                <div className="font-technical-data text-xs font-bold text-primary mb-2 leading-snug">{siteConfig.address}</div>
+                <p className="text-xs text-slate-500 font-body-md leading-relaxed">
+                  Lokasi strategis di pusat manufaktur untuk mempercepat proses supply dan penanganan logistik ke wilayah timur maupun barat Indonesia.
+                </p>
               </div>
             </div>
 
-            <div className="bg-primary text-on-primary p-8 rounded-xl relative overflow-hidden">
-              <div className="absolute -right-12 -bottom-12 opacity-10">
+            <div className="bg-primary text-white p-8 rounded border border-slate-800 relative overflow-hidden shadow-lg">
+              <div className="absolute -right-12 -bottom-12 opacity-5">
                 <span className="material-symbols-outlined text-[160px]">precision_manufacturing</span>
               </div>
-              <h4 className="font-headline-sm text-headline-sm mb-4 relative z-10">Catalog + Knowledge Center</h4>
-              <p className="font-body-md opacity-90 mb-8 relative z-10">
-                Lihat katalog produk dan artikel teknis untuk memvalidasi standar, schedule, dan material sebelum order.
+              <span className="text-accent font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Quick Navigation</span>
+              <h4 className="font-technical-data text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Katalog &amp; Data Teknik</h4>
+              <p className="font-body-md text-xs text-slate-300 opacity-90 mb-8 relative z-10 leading-relaxed">
+                Pelajari standar dimensi, rating pressure, dan chemical composition material stainless steel di halaman katalog dan download tools kami.
               </p>
               <div className="grid grid-cols-2 gap-3 relative z-10">
-                <Link className="bg-white text-primary py-3 rounded-lg font-bold text-center hover:bg-primary-fixed" href="/products">
-                  Products
+                <Link className="bg-white text-primary hover:bg-slate-100 py-3.5 rounded font-technical-data text-xs font-bold text-center uppercase tracking-wider transition-colors shadow" href="/products">
+                  Lihat Produk
                 </Link>
-                <Link className="bg-white text-primary py-3 rounded-lg font-bold text-center hover:bg-primary-fixed" href="/blog">
-                  Blog
+                <Link className="bg-[#12284C] text-white border border-slate-700/60 hover:bg-[#183563] py-3.5 rounded font-technical-data text-xs font-bold text-center uppercase tracking-wider transition-colors" href="/blog">
+                  Baca Artikel
                 </Link>
               </div>
             </div>

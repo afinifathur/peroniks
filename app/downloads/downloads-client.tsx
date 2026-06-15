@@ -22,26 +22,26 @@ export function DownloadsClient({ downloads }: { downloads: Download[] }) {
 
   return (
     <>
-      <section className="bg-surface-bright py-6 border-b border-border-subtle">
+      <section className="bg-white py-6 border-b border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-            <nav className="flex items-center gap-2 text-on-surface-variant font-technical-data text-sm">
+            <nav className="flex items-center gap-2 text-slate-400 font-technical-data text-xs uppercase tracking-wider">
               <Link className="hover:text-primary" href="/">
                 Home
               </Link>
-              <span className="material-symbols-outlined text-sm">chevron_right</span>
-              <span className="font-semibold text-primary">Downloads</span>
+              <span className="material-symbols-outlined text-xs">chevron_right</span>
+              <span className="font-bold text-slate-800">Downloads</span>
             </nav>
 
             <div className="relative w-full md:w-96">
-              <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-on-surface-variant">
+              <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-lg">
                 search
               </span>
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 bg-white border border-border-subtle rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all font-body-md"
-                placeholder="Cari dokumen (contoh: ANSI B16.5, MTC)..."
+                className="w-full pl-11 pr-4 py-2.5 bg-slate-50 border border-slate-200 hover:border-primary/20 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded font-technical-data text-xs transition-all duration-200 shadow-inner"
+                placeholder="Cari dokumen teknik (contoh: ANSI B16.5, MTC)..."
                 type="text"
               />
             </div>
@@ -49,22 +49,23 @@ export function DownloadsClient({ downloads }: { downloads: Download[] }) {
         </div>
       </section>
 
-      <main className="max-w-container-max mx-auto px-gutter py-12">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+      <main className="max-w-container-max mx-auto px-gutter py-16">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
           <div>
-            <h1 className="font-headline-md text-headline-md mb-2">Engineering Downloads</h1>
-            <p className="text-on-surface-variant font-body-md">
-              Dokumen berikut menggunakan placeholder URL. Nantinya dapat diganti dengan PDF asli.
+            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Engineering Resource Center</span>
+            <h1 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Pusat Unduhan Dokumen Teknik</h1>
+            <p className="text-slate-500 font-body-md text-xs leading-relaxed max-w-xl">
+              Referensi spesifikasi, standar material, toleransi dimensi flange dan fitting stainless steel untuk memvalidasi detail proyek Anda.
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <span className="font-technical-data text-xs text-on-surface-variant">Category:</span>
+            <span className="font-technical-data text-xs font-bold text-slate-600 uppercase tracking-wider">Kategori:</span>
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="bg-white border border-border-subtle rounded-lg px-3 py-2 text-sm font-technical-data focus:ring-2 focus:ring-primary/20"
+              className="bg-slate-50 border border-slate-200 rounded px-3 py-2 text-xs font-technical-data font-bold text-slate-700 focus:border-accent focus:outline-none transition-colors"
             >
-              <option value="">All</option>
+              <option value="">Semua Dokumen</option>
               {categories.map((c) => (
                 <option key={c} value={c}>
                   {c}
@@ -74,11 +75,17 @@ export function DownloadsClient({ downloads }: { downloads: Download[] }) {
           </div>
         </div>
 
-        <div className="bg-surface-container-low rounded-xl p-8">
+        <div className="bg-slate-50 rounded border border-slate-200 p-6 md:p-8">
           <div className="space-y-4">
-            {filtered.map((d) => (
-              <DownloadCard key={d.id} item={d} />
-            ))}
+            {filtered.length > 0 ? (
+              filtered.map((d) => (
+                <DownloadCard key={d.id} item={d} />
+              ))
+            ) : (
+              <div className="text-center py-12 text-slate-500 font-technical-data text-xs">
+                Tidak ada dokumen yang cocok dengan pencarian Anda.
+              </div>
+            )}
           </div>
         </div>
       </main>

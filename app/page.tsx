@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { ProductCard } from "@/components/ProductCard";
 import { DownloadCard } from "@/components/DownloadCard";
+import { ArticleCard } from "@/components/ArticleCard";
 import { products } from "@/data/products";
 import { downloads } from "@/data/downloads";
 import { articles } from "@/data/articles";
@@ -18,52 +19,50 @@ export default function Home() {
     <>
       <Hero />
 
-      {/* Stats */}
-      <section className="bg-surface-container-low py-12 border-y border-border-subtle">
-        <div className="max-w-container-max mx-auto px-gutter">
+      {/* Stats Section */}
+      <section className="bg-primary text-white py-12 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:14px_24px]" />
+        <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="font-technical-data text-[40px] text-primary mb-1">5000+</div>
-              <div className="font-label-caps text-label-caps text-on-surface-variant">Produk Ready Stock</div>
-            </div>
-            <div className="text-center md:border-l border-border-subtle">
-              <div className="font-technical-data text-[40px] text-primary mb-1">15+</div>
-              <div className="font-label-caps text-label-caps text-on-surface-variant">Tahun Pengalaman</div>
-            </div>
-            <div className="text-center border-l border-border-subtle">
-              <div className="font-technical-data text-[40px] text-primary mb-1">24 Jam</div>
-              <div className="font-label-caps text-label-caps text-on-surface-variant">Respon Penawaran</div>
-            </div>
-            <div className="text-center border-l border-border-subtle">
-              <div className="font-technical-data text-[40px] text-primary mb-1">ISO</div>
-              <div className="font-label-caps text-label-caps text-on-surface-variant">Standar Kualitas</div>
-            </div>
+            {[
+              { value: "5,000+", label: "Produk Ready Stock", desc: "Flange, Fittings & Valves" },
+              { value: "15+ Tahun", label: "Pengalaman Industri", desc: "Manufaktur & Supply" },
+              { value: "< 24 Jam", label: "Respon Penawaran", desc: "Cepat & Tepat Waktu" },
+              { value: "100%", label: "Material Traceable", desc: "Dilengkapi Sertifikat MTC" },
+            ].map((stat, i) => (
+              <div key={stat.label} className={`text-center ${i > 0 ? "md:border-l border-slate-700/50" : ""}`}>
+                <div className="font-technical-data text-3xl md:text-4xl text-accent font-extrabold mb-1">{stat.value}</div>
+                <div className="font-technical-data text-xs font-bold tracking-wider uppercase mb-1 text-slate-100">{stat.label}</div>
+                <div className="text-xs text-slate-400 font-body-md">{stat.desc}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Product Categories */}
-      <section className="py-section-gap">
+      {/* Product Catalog Preview */}
+      <section className="py-20 bg-white">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-12">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-12 border-b border-slate-100 pb-8">
             <div>
-              <h2 className="font-headline-md text-headline-md mb-2">Katalog Produk Utama</h2>
-              <p className="font-body-md text-body-md text-on-surface-variant">
-                Komponen presisi dengan spesifikasi teknis lengkap.
+              <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Featured Catalog</span>
+              <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Katalog Produk Utama</h2>
+              <p className="font-body-md text-xs text-slate-500 leading-relaxed">
+                Komponen presisi dengan spesifikasi teknis lengkap, siap memenuhi standard industri.
               </p>
             </div>
             <Link
-              className="font-body-md text-primary font-semibold flex items-center gap-2 group hover:underline decoration-primary underline-offset-4"
+              className="font-technical-data text-xs font-bold uppercase tracking-wider text-accent flex items-center gap-2 group hover:underline decoration-accent underline-offset-4"
               href="/products"
             >
               Lihat Katalog Lengkap{" "}
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">
+              <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
                 arrow_forward
               </span>
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {topProducts.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
@@ -71,78 +70,162 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose */}
-      <section className="bg-surface-container-high py-section-gap">
+      {/* Why Choose PERONIKS */}
+      <section className="bg-slate-50 py-20 border-y border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-16">
-            <h2 className="font-headline-md text-headline-md mb-4">Mengapa Memilih PERONIKS?</h2>
-            <div className="w-20 h-1 bg-primary mx-auto" />
+            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Why Partner With Us</span>
+            <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Mengapa Memilih PERONIKS?</h2>
+            <div className="w-12 h-1 bg-accent mx-auto" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
-              { icon: "timer", title: "Fast Response", desc: "Penawaran harga dikirim kurang dari 24 jam." },
-              { icon: "engineering", title: "Tech Support", desc: "Konsultasi material dan spesifikasi engineering." },
-              { icon: "factory", title: "Custom Mfg", desc: "Bisa produksi spesifikasi khusus (non-standar)." },
-              { icon: "verified", title: "Quality Control", desc: "Uji dimensi dan verifikasi material untuk setiap produk." },
-              { icon: "local_shipping", title: "Reliable", desc: "Pengiriman tepat waktu ke seluruh Indonesia." },
+              { icon: "timer", title: "Respon Cepat", desc: "Estimasi penawaran harga dikirim kurang dari 24 jam kerja." },
+              { icon: "verified", title: "Material Traceability", desc: "Semua produk disertai Mill Test Certificate (MTC 3.1) valid." },
+              { icon: "precision_manufacturing", title: "Presisi CNC", desc: "Pemesanan khusus diproduksi menggunakan mesin CNC mutakhir." },
+              { icon: "rule", title: "Kontrol Kualitas", desc: "Inspeksi dimensional lengkap sebelum pengiriman ke customer." },
+              { icon: "local_shipping", title: "Logistik Andal", desc: "Pengiriman aman tepat waktu ke seluruh wilayah Indonesia." },
             ].map((x) => (
-              <div key={x.title} className="flex flex-col items-center text-center p-6 bg-white rounded-xl shadow-sm">
-                <span className="material-symbols-outlined text-primary text-4xl mb-4">{x.icon}</span>
-                <h4 className="font-headline-sm text-body-lg font-bold mb-2">{x.title}</h4>
-                <p className="font-body-md text-body-md text-on-surface-variant">{x.desc}</p>
+              <div key={x.title} className="flex flex-col items-center text-center p-6 bg-white border border-slate-200 hover:border-accent/30 rounded shadow-sm hover:shadow-md transition-all duration-200">
+                <div className="bg-slate-50 p-3 rounded-full text-accent mb-4 border border-slate-100 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-3xl">{x.icon}</span>
+                </div>
+                <h4 className="font-technical-data text-sm font-bold text-primary mb-2">{x.title}</h4>
+                <p className="font-body-md text-xs text-slate-500 leading-relaxed">{x.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Knowledge & Downloads */}
-      <section className="py-section-gap">
+      {/* Manufacturing Capabilities */}
+      <section className="py-20 bg-white">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="text-center mb-16">
+            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Production Capabilities</span>
+            <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Kapasitas Manufaktur Kami</h2>
+            <div className="w-12 h-1 bg-accent mx-auto" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: "settings_suggest",
+                title: "Custom CNC Machining",
+                desc: "Pengerjaan bubut, milling, dan drilling presisi tinggi untuk material stainless steel custom.",
+                image: "/images/cnc-machining.jpg"
+              },
+              {
+                icon: "factory",
+                title: "Flange Manufacturing",
+                desc: "Pembuatan blind flanges, slip-on, weld neck, socket weld standard JIS, ANSI, DIN, PN.",
+                image: "/images/stainless-steel-flange.jpg"
+              },
+              {
+                icon: "hardware",
+                title: "Valve Customization",
+                desc: "Modifikasi seating valve, flanged ends, body machining untuk integrasi pipa khusus.",
+                image: "/images/ball-valves.jpg"
+              },
+              {
+                icon: "construction",
+                title: "Precision Engineering",
+                desc: "Pembuatan drawing CAD, verifikasi toleransi fitting, dan support tim teknik proyek.",
+                image: "/images/quality-control.jpg"
+              }
+            ].map((cap) => (
+              <div key={cap.title} className="group bg-slate-50 border border-slate-200 hover:border-accent/40 rounded overflow-hidden shadow-sm flex flex-col h-full transition-all duration-300">
+                <div className="aspect-[16/10] w-full overflow-hidden relative">
+                  <Image
+                    src={cap.image}
+                    alt={cap.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
+                </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="material-symbols-outlined text-accent text-lg">{cap.icon}</span>
+                    <h4 className="font-technical-data text-sm font-bold text-primary">{cap.title}</h4>
+                  </div>
+                  <p className="font-body-md text-xs text-slate-500 leading-relaxed mb-4">
+                    {cap.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries We Serve */}
+      <section className="py-20 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="text-center mb-16">
+            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Industries We Serve</span>
+            <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Industri Yang Kami Layani</h2>
+            <div className="w-12 h-1 bg-accent mx-auto" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[
+              { icon: "oil_barrel", label: "Oil & Gas", desc: "Piping migas standar tinggi" },
+              { icon: "water_drop", label: "Water Treatment", desc: "Sistem desalinasi & IPA" },
+              { icon: "restaurant", label: "Food Industry", desc: "Higienis SS304/SS316" },
+              { icon: "science", label: "Chemical Plant", desc: "Ketahanan korosi asam" },
+              { icon: "directions_boat", label: "Marine Service", desc: "Standard lambung & deck" },
+              { icon: "precision_manufacturing", label: "Manufacturing", desc: "Piping utilitas pabrik" },
+            ].map((ind) => (
+              <div key={ind.label} className="bg-white border border-slate-200 hover:border-accent/30 rounded p-6 text-center hover:shadow-md transition-all duration-300 flex flex-col items-center">
+                <div className="bg-slate-50 p-3 rounded text-accent mb-4 flex items-center justify-center">
+                  <span className="material-symbols-outlined text-3xl">{ind.icon}</span>
+                </div>
+                <h4 className="font-technical-data text-xs font-bold text-primary mb-1">{ind.label}</h4>
+                <p className="text-[10px] text-slate-400 font-body-md leading-snug">{ind.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Knowledge & Resources */}
+      <section className="py-20 bg-white">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="font-headline-md text-headline-md mb-8 flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary">book</span> Knowledge Center
-              </h2>
-              <div className="space-y-6">
-                {latestArticles.map((a, idx) => (
-                  <article
-                    key={a.slug}
-                    className={[
-                      "p-6 bg-white border border-border-subtle rounded-lg hover:shadow-md transition-shadow",
-                      idx === 0 ? "technical-border-left" : "",
-                    ].join(" ")}
-                  >
-                    <h3 className="font-headline-sm text-body-lg font-bold mb-2">{a.title}</h3>
-                    <p className="font-body-md text-body-md text-on-surface-variant mb-4">{a.excerpt}</p>
-                    <Link className="text-primary font-semibold inline-flex items-center gap-1 group" href={`/blog/${a.slug}`}>
-                      Baca Selengkapnya{" "}
-                      <span className="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform">
-                        open_in_new
-                      </span>
-                    </Link>
-                  </article>
-                ))}
-                <Link className="inline-flex bg-surface-container-high px-6 py-3 rounded-lg font-body-md font-semibold text-primary" href="/blog">
+              <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
+                <h2 className="font-technical-data text-lg font-bold text-primary flex items-center gap-3">
+                  <span className="material-symbols-outlined text-accent">book</span> Knowledge Center
+                </h2>
+                <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-accent" href="/blog">
                   Lihat Semua Artikel
                 </Link>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {latestArticles.map((a) => (
+                  <ArticleCard key={a.slug} article={a} />
+                ))}
               </div>
             </div>
 
             <div>
-              <h2 className="font-headline-md text-headline-md mb-8 flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary">download</span> Engineering Tools
-              </h2>
-              <div className="bg-surface-container-low rounded-xl p-8">
+              <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
+                <h2 className="font-technical-data text-lg font-bold text-primary flex items-center gap-3">
+                  <span className="material-symbols-outlined text-accent">download</span> Engineering Tools
+                </h2>
+                <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-accent" href="/downloads">
+                  Engineering Downloads
+                </Link>
+              </div>
+              <div className="bg-slate-50 rounded border border-slate-200 p-6 space-y-4">
                 <div className="space-y-4">
                   {topDownloads.map((d) => (
                     <DownloadCard key={d.id} item={d} />
                   ))}
                 </div>
-                <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/10">
-                  <p className="font-body-md text-body-md text-on-surface-variant italic">
+                <div className="mt-6 p-4 bg-accent/5 rounded border border-accent/15">
+                  <p className="font-body-md text-xs text-slate-600 italic leading-relaxed">
                     &quot;Gunakan tabel dimensi ini untuk memvalidasi spesifikasi engineering Anda sebelum melakukan
-                    pemesanan.&quot;
+                    pemesanan. Tim support teknik kami siap membantu verifikasi material.&quot;
                   </p>
                 </div>
               </div>
@@ -151,70 +234,50 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industries */}
-      <section className="py-section-gap bg-white border-y border-border-subtle overflow-hidden">
+      {/* Factory & QC Overview */}
+      <section className="py-20 bg-slate-50 border-t border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
-          <h2 className="font-headline-sm text-headline-sm text-center mb-12 uppercase tracking-widest text-on-surface-variant">
-            Industri Yang Kami Layani
-          </h2>
-          <div className="flex flex-wrap justify-center gap-12 grayscale opacity-60 hover:opacity-100 transition-all">
-            {[
-              { icon: "water_drop", label: "Water Treatment" },
-              { icon: "restaurant", label: "Food & Beverage" },
-              { icon: "oil_barrel", label: "Oil & Gas" },
-              { icon: "agriculture", label: "Palm Oil" },
-              { icon: "science", label: "Chemical" },
-            ].map((x) => (
-              <div key={x.label} className="flex flex-col items-center gap-4">
-                <span className="material-symbols-outlined text-5xl">{x.icon}</span>
-                <span className="font-label-caps text-label-caps">{x.label}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative rounded overflow-hidden shadow-lg border border-slate-200 bg-white p-3">
+              <div className="aspect-[16/10] relative rounded overflow-hidden">
+                <Image
+                  alt="Quality Control"
+                  src="/images/quality-control.jpg"
+                  fill
+                  className="object-cover"
+                />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Factory & QC */}
-      <section className="py-section-gap">
-        <div className="max-w-container-max mx-auto px-gutter">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                alt="Quality Control"
-                src="/images/quality-control.jpg"
-                width={1200}
-                height={800}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute bottom-6 left-6 bg-white/95 p-4 rounded-lg shadow-lg">
-                <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-success-industrial">check_circle</span>
-                  <span className="font-body-md text-body-md font-bold">100% Quality Inspected</span>
+              <div className="absolute bottom-6 left-6 bg-[#0B192C] text-white py-2.5 px-4 rounded border border-slate-800 shadow-xl z-10">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-accent text-lg">check_circle</span>
+                  <span className="font-technical-data text-[10px] uppercase tracking-wider font-bold">100% Quality Inspected</span>
                 </div>
               </div>
             </div>
             <div>
-              <h2 className="font-headline-md text-headline-md mb-6">Manufaktur &amp; Pengawasan Kualitas</h2>
-              <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                Setiap komponen melewati serangkaian pengujian dan verifikasi. Kami membantu tim engineering memastikan
-                integrasi sempurna pada sistem perpipaan dengan kontrol dimensi dan material yang konsisten.
+              <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">QA/QC Control</span>
+              <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-6">Manufaktur &amp; Pengawasan Kualitas</h2>
+              <p className="font-body-lg text-sm text-slate-500 mb-8 leading-relaxed">
+                Setiap komponen melewati serangkaian pengujian dan verifikasi laboratorium. Kami berkomitmen membantu tim engineering memastikan integrasi sempurna pada sistem perpipaan dengan kontrol toleransi dimensional dan audit material yang ketat.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {[
                   {
                     title: "Uji Material Spektrometer (PMI)",
-                    desc: "Memastikan kandungan kimia sesuai grade SS304/SS316 dan requirement proyek.",
+                    desc: "Memverifikasi kandungan kimia (Cr, Ni, Mo) untuk memastikan grade SS304/SS316 sesuai dengan Mill Test Certificate dan requirement proyek.",
                   },
                   {
                     title: "Hydrostatic Pressure Test",
-                    desc: "Pengecekan integritas struktural untuk valve dan fitting tertentu sesuai standar.",
+                    desc: "Pengecekan integritas struktural dan uji kebocoran (leakage test) untuk produk valve dan fitting khusus sebelum masuk tahap finishing.",
                   },
                 ].map((x) => (
                   <div key={x.title} className="flex gap-4">
-                    <span className="material-symbols-outlined text-primary">done_all</span>
+                    <div className="bg-accent/15 p-2 rounded text-accent flex items-center justify-center shrink-0 h-10 w-10">
+                      <span className="material-symbols-outlined text-lg">done_all</span>
+                    </div>
                     <div>
-                      <h4 className="font-body-md font-bold">{x.title}</h4>
-                      <p className="font-body-md text-on-surface-variant">{x.desc}</p>
+                      <h4 className="font-technical-data text-sm font-bold text-primary mb-1">{x.title}</h4>
+                      <p className="font-body-md text-xs text-slate-500 leading-relaxed">{x.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -225,58 +288,56 @@ export default function Home() {
       </section>
 
       {/* Contact CTA */}
-      <section className="bg-primary text-on-primary py-section-gap relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48 blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full -ml-48 -mb-48 blur-3xl" />
-        </div>
+      <section className="bg-primary text-white py-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5 bg-[linear-gradient(to_right,#808080_1px,transparent_1px),linear-gradient(to_bottom,#808080_1px,transparent_1px)] bg-[size:24px_24px]" />
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">
+              <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Get a Quote Today</span>
+              <h2 className="font-technical-data text-3xl md:text-5xl text-white font-extrabold mt-2 mb-6 leading-[1.15]">
                 Butuh Penawaran Harga Hari Ini?
               </h2>
-              <p className="font-body-lg text-body-lg opacity-90 mb-10">
-                Hubungi tim sales via WhatsApp untuk respon cepat, spesifikasi jelas, dan harga kompetitif.
+              <p className="font-body-lg text-sm text-slate-300 opacity-90 mb-8 leading-relaxed max-w-xl">
+                Hubungi tim sales via WhatsApp untuk respon cepat, spesifikasi jelas, dan harga kompetitif. Kami menyediakan penawaran dalam format PDF resmi kurang dari 24 jam.
               </p>
-              <div className="space-y-6 mb-10">
-                <div className="flex items-center gap-4">
-                  <span className="material-symbols-outlined">location_on</span>
-                  <span className="font-body-md">{siteConfig.address}</span>
+              <div className="space-y-4 mb-8 text-xs font-technical-data uppercase tracking-wider text-slate-300">
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-accent">location_on</span>
+                  <span>{siteConfig.address}</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <span className="material-symbols-outlined">mail</span>
-                  <span className="font-body-md">{siteConfig.email}</span>
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-accent">mail</span>
+                  <span>{siteConfig.email}</span>
                 </div>
-                <div className="flex items-center gap-4">
-                  <span className="material-symbols-outlined">call</span>
-                  <span className="font-body-md">{siteConfig.phone}</span>
+                <div className="flex items-center gap-3">
+                  <span className="material-symbols-outlined text-accent">call</span>
+                  <span>{siteConfig.phone}</span>
                 </div>
               </div>
               <a
-                className="inline-flex items-center gap-4 bg-white text-primary px-10 py-5 rounded-2xl font-headline-sm text-headline-sm hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-accent/20"
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <span className="material-symbols-outlined">chat</span> Chat via WhatsApp
+                <span className="material-symbols-outlined text-base">chat</span> Chat Sales via WhatsApp
               </a>
             </div>
-            <div className="bg-white rounded-2xl h-[400px] overflow-hidden shadow-2xl">
-              <div className="w-full h-full bg-surface-container-high relative">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-                  <span className="material-symbols-outlined text-6xl text-outline-variant mb-4">map</span>
-                  <p className="text-on-surface-variant font-body-md mb-6">Lokasi Strategis di Pusat Manufaktur Indonesia</p>
-                  <Link className="bg-primary text-white px-6 py-2 rounded-lg font-body-md" href="/contact">
-                    Buka Detail Kontak
+            <div className="bg-[#12284C]/50 border border-slate-700/60 rounded p-3 h-[380px] overflow-hidden shadow-2xl relative">
+              <div className="w-full h-full bg-slate-900/40 relative rounded overflow-hidden">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-slate-950/40 backdrop-blur-[2px]">
+                  <span className="material-symbols-outlined text-5xl text-accent mb-4">map</span>
+                  <h4 className="font-technical-data text-sm font-bold text-white mb-2 uppercase tracking-wider">Lokasi Kantor &amp; Workshop</h4>
+                  <p className="text-slate-300 text-xs font-body-md mb-6 max-w-sm leading-relaxed">Terletak strategis di pusat manufaktur dan distribusi industri Indonesia.</p>
+                  <Link className="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-colors duration-200" href="/contact">
+                    Buka Detail Kontak &amp; Peta
                   </Link>
                 </div>
                 <Image
                   alt="Map placeholder"
                   src="/images/cnc-machining.jpg"
-                  width={1200}
-                  height={800}
-                  className="w-full h-full object-cover opacity-30 grayscale"
+                  fill
+                  className="object-cover opacity-20 grayscale"
                 />
               </div>
             </div>

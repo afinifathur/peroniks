@@ -4,35 +4,52 @@ import type { Article } from "@/lib/types";
 
 export function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="group relative overflow-hidden rounded-xl border border-border-subtle bg-white hover:border-primary/40 transition-colors">
-      <div className="aspect-[21/9] w-full bg-surface-container relative">
+    <article className="group bg-white border border-slate-200 hover:border-accent/40 rounded overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
+      <div className="aspect-[16/9] w-full bg-slate-100 overflow-hidden relative border-b border-slate-100">
         <Image
           src={article.featuredImage}
           alt={article.title}
-          width={1400}
-          height={600}
-          className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+          width={800}
+          height={450}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute top-6 left-6 flex gap-2">
-          <span className="bg-primary text-white text-[10px] px-3 py-1 font-technical-data rounded uppercase tracking-wider">
+        <div className="absolute top-4 left-4 flex gap-2">
+          <span className="bg-primary text-white text-[9px] font-technical-data px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
             {article.category}
           </span>
-          <span className="bg-on-background text-white text-[10px] px-3 py-1 font-technical-data rounded uppercase tracking-wider">
-            PERONIKS
+          <span className="bg-accent text-white text-[9px] font-technical-data px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
+            Technical
           </span>
         </div>
       </div>
-      <div className="p-8">
-        <div className="flex items-center gap-4 mb-4 font-technical-data text-xs text-on-surface-variant">
-          <span>Last Updated: {article.publishedDate}</span>
+      <div className="p-6 flex flex-col flex-1">
+        <div className="flex items-center gap-4 mb-3 font-technical-data text-[10px] text-slate-400 font-bold uppercase tracking-wider">
           <span className="flex items-center gap-1">
-            <span className="material-symbols-outlined text-sm">timer</span> {article.readingTime}
+            <span className="material-symbols-outlined text-xs text-slate-400">calendar_month</span>
+            {article.publishedDate}
+          </span>
+          <span className="flex items-center gap-1">
+            <span className="material-symbols-outlined text-xs text-slate-400">timer</span>
+            {article.readingTime}
           </span>
         </div>
-        <h2 className="font-headline-md text-headline-md text-on-surface mb-4">{article.title}</h2>
-        <p className="text-body-lg text-on-surface-variant mb-6 line-clamp-3">{article.excerpt}</p>
-        <Link className="inline-flex items-center gap-2 text-primary font-bold hover:underline" href={`/blog/${article.slug}`}>
-          Baca Selengkapnya <span className="material-symbols-outlined">arrow_forward</span>
+        
+        <h3 className="font-technical-data text-base font-bold text-primary mb-3 line-clamp-2 group-hover:text-accent transition-colors duration-200 leading-snug">
+          {article.title}
+        </h3>
+        
+        <p className="font-body-md text-xs text-slate-500 mb-6 line-clamp-3 leading-relaxed">
+          {article.excerpt}
+        </p>
+        
+        <Link 
+          className="mt-auto inline-flex items-center gap-1 text-xs font-technical-data font-bold uppercase tracking-wider text-primary group-hover/btn:text-accent hover:text-accent transition-colors"
+          href={`/blog/${article.slug}`}
+        >
+          Baca Selengkapnya 
+          <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform duration-200">
+            arrow_forward
+          </span>
         </Link>
       </div>
     </article>

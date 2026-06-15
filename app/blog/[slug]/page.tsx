@@ -73,48 +73,48 @@ export default async function BlogDetailPage({
         {JSON.stringify(jsonLd)}
       </Script>
 
-      <section className="bg-surface-bright py-6 border-b border-border-subtle">
+      <section className="bg-white py-6 border-b border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
-          <nav className="flex items-center gap-2 text-on-surface-variant font-technical-data text-sm">
+          <nav className="flex items-center gap-2 text-slate-400 font-technical-data text-xs uppercase tracking-wider">
             <Link className="hover:text-primary" href="/">
               Home
             </Link>
-            <span className="material-symbols-outlined text-sm">chevron_right</span>
+            <span className="material-symbols-outlined text-xs">chevron_right</span>
             <Link className="hover:text-primary" href="/blog">
               Knowledge Center
             </Link>
-            <span className="material-symbols-outlined text-sm">chevron_right</span>
-            <span className="font-semibold text-primary line-clamp-1">{article.title}</span>
+            <span className="material-symbols-outlined text-xs">chevron_right</span>
+            <span className="font-bold text-slate-800 line-clamp-1">{article.title}</span>
           </nav>
         </div>
       </section>
 
-      <article className="max-w-container-max mx-auto px-gutter py-12">
+      <article className="max-w-container-max mx-auto px-gutter py-16">
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-4">
-            <span className="bg-primary text-white text-[10px] px-3 py-1 font-technical-data rounded uppercase tracking-wider">
+            <span className="bg-primary text-white text-[9px] font-technical-data px-2.5 py-0.5 rounded-sm font-bold uppercase tracking-wider">
               {article.category}
             </span>
-            <span className="bg-surface-container text-on-surface-variant text-[10px] px-3 py-1 font-technical-data rounded uppercase tracking-wider">
+            <span className="bg-slate-100 text-slate-600 text-[9px] font-technical-data px-2.5 py-0.5 rounded-sm font-bold uppercase tracking-wider">
               {article.readingTime}
             </span>
           </div>
 
-          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">
+          <h1 className="font-technical-data text-3xl md:text-5xl text-primary font-extrabold mb-4 leading-[1.15]">
             {article.title}
           </h1>
-          <p className="text-body-lg text-on-surface-variant mb-6">{article.excerpt}</p>
+          <p className="font-body-lg text-slate-500 mb-6 text-base leading-relaxed max-w-4xl">{article.excerpt}</p>
 
-          <div className="flex flex-wrap items-center gap-4 font-technical-data text-xs text-on-surface-variant">
-            <span>By: {article.author}</span>
+          <div className="flex flex-wrap items-center gap-4 font-technical-data text-xs uppercase tracking-wider font-bold text-slate-400">
+            <span>Penulis: {article.author}</span>
             <span className="flex items-center gap-1">
               <span className="material-symbols-outlined text-sm">event</span> {article.publishedDate}
             </span>
           </div>
         </div>
 
-        <div className="rounded-2xl overflow-hidden border border-border-subtle bg-surface-container-low mb-12">
-          <div className="aspect-[21/9] w-full relative">
+        <div className="rounded border border-slate-200 bg-slate-50 p-2 mb-12 shadow-sm">
+          <div className="aspect-[21/9] w-full relative rounded overflow-hidden">
             <Image src={article.featuredImage} alt={article.title} fill className="object-cover" priority />
           </div>
         </div>
@@ -122,50 +122,51 @@ export default async function BlogDetailPage({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8">
             <div
-              className="prose prose-slate max-w-none prose-headings:font-body-lg prose-headings:text-on-surface prose-p:text-on-surface-variant prose-strong:text-on-surface prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-on-surface-variant prose-table:text-sm"
+              className="prose prose-slate max-w-none prose-headings:font-technical-data prose-headings:font-bold prose-headings:text-primary prose-p:text-slate-600 prose-p:font-body-md prose-p:text-sm prose-p:leading-relaxed prose-strong:text-slate-800 prose-a:text-accent hover:prose-a:underline prose-blockquote:border-l-accent prose-blockquote:text-slate-500 prose-table:text-xs font-body-md"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
 
           <aside className="lg:col-span-4 space-y-8">
-            <div className="bg-white border border-border-subtle rounded-lg overflow-hidden shadow-sm">
-              <div className="bg-surface-container p-4 border-b border-border-subtle">
-                <h4 className="font-label-caps text-label-caps text-on-surface-variant uppercase flex items-center gap-2">
-                  <span className="material-symbols-outlined text-sm">info</span>
-                  Technical Summary
+            <div className="bg-white border border-slate-200 rounded overflow-hidden shadow-sm">
+              <div className="bg-slate-50 p-4 border-b border-slate-200">
+                <h4 className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+                  <span className="material-symbols-outlined text-accent text-base">info</span>
+                  Ringkasan Teknis
                 </h4>
               </div>
-              <div className="p-5 space-y-3 text-sm text-on-surface-variant">
+              <div className="p-5 space-y-3 text-xs font-technical-data text-slate-600">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-technical-data">Category</span>
-                  <span className="font-technical-data text-primary">{article.category}</span>
+                  <span>Kategori</span>
+                  <span className="font-bold text-slate-800 uppercase tracking-wider">{article.category}</span>
                 </div>
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-technical-data">Reading time</span>
-                  <span className="font-technical-data text-primary">{article.readingTime}</span>
+                  <span>Waktu Baca</span>
+                  <span className="font-bold text-slate-800 uppercase tracking-wider">{article.readingTime}</span>
                 </div>
-                <div className="pt-3 border-t border-border-subtle">
-                  <Link className="text-primary font-technical-data hover:underline" href="/downloads">
-                    Download engineering tables →
+                <div className="pt-3 border-t border-slate-200 mt-2">
+                  <Link className="text-accent hover:underline font-bold uppercase tracking-wider flex items-center gap-1" href="/downloads">
+                    Tabel Dimensi &amp; Unduhan <span className="material-symbols-outlined text-sm">arrow_forward</span>
                   </Link>
                 </div>
               </div>
             </div>
 
-            <div className="bg-primary text-on-primary p-8 rounded-xl relative overflow-hidden">
-              <div className="absolute -right-12 -bottom-12 opacity-10">
+            <div className="bg-primary text-white p-8 rounded border border-slate-800 relative overflow-hidden shadow-lg">
+              <div className="absolute -right-12 -bottom-12 opacity-5">
                 <span className="material-symbols-outlined text-[160px]">chat</span>
               </div>
-              <h4 className="font-headline-sm text-headline-sm mb-4 relative z-10">Minta Dukungan Spesifikasi</h4>
-              <p className="font-body-md opacity-90 mb-8 relative z-10">
-                Kirim kebutuhan DN/NPS, class/PN, standard, dan material. Tim kami bantu review cepat.
+              <span className="text-accent font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Engineering Support</span>
+              <h4 className="font-technical-data text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Butuh Bantuan Spesifikasi?</h4>
+              <p className="font-body-md text-xs text-slate-300 opacity-90 mb-8 relative z-10 leading-relaxed">
+                Kirim detail kebutuhan ukuran (DN/NPS), standard (ANSI/JIS/DIN), rating pressure, dan material steel ke sales engineer kami untuk review gratis.
               </p>
               <Link
-                className="inline-flex items-center justify-center gap-3 w-full py-4 bg-white text-primary font-bold rounded-lg hover:bg-primary-fixed transition-colors shadow-lg relative z-10"
+                className="inline-flex items-center justify-center gap-2 w-full py-3 bg-accent text-white font-technical-data text-xs font-bold uppercase tracking-wider rounded hover:bg-accent/90 transition-colors shadow-md shadow-accent/25 relative z-10"
                 href="/contact"
               >
-                <span className="material-symbols-outlined">engineering</span>
-                Hubungi Sales
+                <span className="material-symbols-outlined text-base">engineering</span>
+                Hubungi Kami
               </Link>
             </div>
           </aside>

@@ -17,55 +17,54 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-surface-bright py-10 border-b border-border-subtle">
+      <section className="bg-white py-16 border-b border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
-          <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Hubungi Kami</h1>
-          <p className="text-body-lg text-on-surface-variant max-w-3xl">
-            Untuk penawaran cepat, kirim spesifikasi: DN/NPS, rating (Class/PN/JIS), standard, material, qty, dan lokasi
-            pengiriman.
+          <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Contact Us</span>
+          <h1 className="font-technical-data text-3xl md:text-5xl text-primary font-extrabold mt-2 mb-4">Hubungi Kami</h1>
+          <p className="font-body-lg text-slate-500 max-w-3xl leading-relaxed text-sm md:text-base">
+            Hubungi tim support teknis dan sales kami untuk mendapatkan konsultasi spesifikasi piping atau permintaan penawaran harga resmi (RFQ) cepat kurang dari 24 jam.
           </p>
         </div>
       </section>
 
-      <main className="max-w-container-max mx-auto px-gutter py-section-gap">
+      <main className="max-w-container-max mx-auto px-gutter py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-7 space-y-8">
             <ContactForm />
 
-            <div className="bg-surface-container-low border border-border-subtle rounded-xl p-8">
-              <h3 className="font-headline-sm text-headline-sm mb-4">Format RFQ yang Disarankan</h3>
-              <div className="font-technical-data text-sm text-on-surface-variant bg-white border border-border-subtle rounded-lg p-4 overflow-x-auto">
-                Weld Neck Flange, ASME B16.5, NPS 4, Class 300, RF, Material ASTM A182 F316L, Qty 20 pcs, MTC ISO 10204
-                3.1
+            <div className="bg-slate-50 border border-slate-200 rounded p-8">
+              <h3 className="font-technical-data text-sm font-bold text-primary mb-4 uppercase tracking-wider">Format RFQ yang Direkomendasikan</h3>
+              <div className="font-technical-data text-xs text-slate-600 bg-white border border-slate-200 rounded p-4 overflow-x-auto leading-relaxed shadow-sm">
+                Weld Neck Flange, ASME B16.5, NPS 4, Class 300, RF, Material ASTM A182 F316L, Qty 20 pcs, MTC ISO 10204 3.1
               </div>
             </div>
           </div>
 
           <aside className="lg:col-span-5 space-y-8">
-            <div className="bg-white border border-border-subtle rounded-xl p-8">
-              <h3 className="font-headline-sm text-headline-sm mb-6">Contact Info</h3>
-              <div className="space-y-4 text-on-surface-variant">
+            <div className="bg-white border border-slate-200 rounded p-8 shadow-sm">
+              <h3 className="font-technical-data text-base font-bold text-primary mb-6 uppercase tracking-wider">Informasi Kontak</h3>
+              <div className="space-y-6 text-slate-600">
                 <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-primary mt-0.5">location_on</span>
+                  <span className="material-symbols-outlined text-accent text-xl mt-0.5">location_on</span>
                   <div>
-                    <div className="font-body-md font-bold text-on-surface">Alamat</div>
-                    <div className="text-sm">{siteConfig.address}</div>
+                    <div className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider mb-1">Kantor &amp; Workshop</div>
+                    <div className="text-xs leading-relaxed font-body-md">{siteConfig.address}</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-primary mt-0.5">mail</span>
+                  <span className="material-symbols-outlined text-accent text-xl mt-0.5">mail</span>
                   <div>
-                    <div className="font-body-md font-bold text-on-surface">Email</div>
-                    <a className="text-sm hover:text-primary transition-colors" href={`mailto:${siteConfig.email}`}>
+                    <div className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider mb-1">Email Resmi</div>
+                    <a className="text-xs hover:text-accent font-technical-data font-bold transition-colors" href={`mailto:${siteConfig.email}`}>
                       {siteConfig.email}
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-primary mt-0.5">call</span>
+                  <span className="material-symbols-outlined text-accent text-xl mt-0.5">call</span>
                   <div>
-                    <div className="font-body-md font-bold text-on-surface">Telepon</div>
-                    <a className="text-sm hover:text-primary transition-colors" href={`tel:${siteConfig.phone}`}>
+                    <div className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider mb-1">Telepon</div>
+                    <a className="text-xs hover:text-accent font-technical-data font-bold transition-colors" href={`tel:${siteConfig.phone}`}>
                       {siteConfig.phone}
                     </a>
                   </div>
@@ -76,29 +75,29 @@ export default function ContactPage() {
                   href={waLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 w-full py-4 bg-primary text-on-primary font-bold rounded-lg hover:opacity-90 transition-colors shadow-lg"
+                  className="flex items-center justify-center gap-2 w-full py-3.5 bg-primary text-white border border-slate-800 hover:bg-slate-900 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow"
                 >
-                  <span className="material-symbols-outlined">chat</span>
-                  Chat WhatsApp
+                  <span className="material-symbols-outlined text-sm text-emerald-400">chat</span>
+                  Hubungi WhatsApp Sales
                 </a>
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl h-[360px] overflow-hidden shadow-2xl border border-border-subtle">
-              <div className="w-full h-full bg-surface-container-high relative">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-10 text-center">
-                  <span className="material-symbols-outlined text-6xl text-outline-variant mb-4">map</span>
-                  <p className="text-on-surface-variant font-body-md mb-6">Map placeholder (akan diganti Google Maps)</p>
-                  <Link className="bg-primary text-white px-6 py-2 rounded-lg font-body-md" href="/">
-                    Kembali ke Home
+            <div className="bg-white rounded border border-slate-200 p-2 h-[360px] overflow-hidden shadow-sm relative">
+              <div className="w-full h-full bg-slate-50 relative rounded overflow-hidden">
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-slate-950/40 backdrop-blur-[2px]">
+                  <span className="material-symbols-outlined text-5xl text-accent mb-4">map</span>
+                  <h4 className="font-technical-data text-sm font-bold text-white mb-2 uppercase tracking-wider">Lokasi Kantor Kami</h4>
+                  <p className="text-slate-300 text-xs font-body-md mb-6 max-w-xs leading-relaxed">Map placeholder. Kami berlokasi strategis untuk memudahkan pengiriman.</p>
+                  <Link className="bg-primary hover:bg-accent text-white px-5 py-2 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors duration-200" href="/">
+                    Kembali ke Beranda
                   </Link>
                 </div>
                 <Image
                   alt="Map placeholder"
                   src="/images/industrial-warehouse.jpg"
-                  width={1200}
-                  height={800}
-                  className="w-full h-full object-cover opacity-30 grayscale"
+                  fill
+                  className="object-cover opacity-20 grayscale"
                 />
               </div>
             </div>
