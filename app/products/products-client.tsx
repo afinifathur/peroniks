@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import type { Product, ProductCategory } from "@/lib/types";
@@ -19,11 +19,17 @@ export function ProductsClient({
   const [q, setQ] = useState(initialQuery);
   const [category, setCategory] = useState(initialCategory);
 
-  useEffect(() => {
+  const [prevInitialQuery, setPrevInitialQuery] = useState(initialQuery);
+  const [prevInitialCategory, setPrevInitialCategory] = useState(initialCategory);
+
+  if (initialQuery !== prevInitialQuery) {
+    setPrevInitialQuery(initialQuery);
     setQ(initialQuery);
+  }
+  if (initialCategory !== prevInitialCategory) {
+    setPrevInitialCategory(initialCategory);
     setCategory(initialCategory);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [initialQuery, initialCategory]);
+  }
 
   const filtered = useMemo(() => {
     const query = q.trim().toLowerCase();
