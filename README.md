@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PERONIKS Industrial Website (Next.js)
 
-## Getting Started
+Production-ready **static** Next.js application (App Router + TypeScript + Tailwind) designed for an Indonesian industrial manufacturer website with strong SEO and technical knowledge content.
 
-First, run the development server:
+## Local installation
+
+Requirements:
+- Node.js 18+ (recommended 20+)
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build (static export):
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Output directory:
+- `out/`
 
-## Learn More
+## Cloudflare Pages deployment
 
-To learn more about Next.js, take a look at the following resources:
+1. Push this repository to GitHub.
+2. In Cloudflare Pages: `Create a project` → connect your GitHub repository.
+3. Build settings:
+   - Build command: `npm run build`
+   - Build output directory: `out`
+4. Deploy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Vercel deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Import the GitHub repository in Vercel.
+2. Build settings:
+   - Build command: `npm run build`
+   - Output directory: `out`
+3. Deploy.
 
-## Deploy on Vercel
+## Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- WhatsApp number: `lib/config.ts` → `siteConfig.whatsappNumber`
+- Dummy data:
+  - Products: `data/products.ts`
+  - Articles (markdown): `data/articles.ts`
+  - Downloads: `data/downloads.ts`
