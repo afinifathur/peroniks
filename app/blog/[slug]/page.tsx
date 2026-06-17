@@ -122,7 +122,7 @@ export default async function BlogDetailPage({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8">
             <div
-              className="prose prose-slate max-w-none prose-headings:font-technical-data prose-headings:font-bold prose-headings:text-primary prose-p:text-slate-600 prose-p:font-body-md prose-p:text-sm prose-p:leading-relaxed prose-strong:text-slate-800 prose-a:text-accent hover:prose-a:underline prose-blockquote:border-l-accent prose-blockquote:text-slate-500 prose-table:text-xs font-body-md"
+              className="prose prose-slate max-w-none prose-headings:font-technical-data prose-headings:font-bold prose-headings:text-primary prose-p:text-slate-600 prose-p:font-body-md prose-p:text-sm prose-p:leading-relaxed prose-strong:text-slate-800 prose-a:text-primary hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-slate-500 prose-table:text-xs font-body-md"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
@@ -131,7 +131,7 @@ export default async function BlogDetailPage({
             <div className="bg-white border border-slate-200 rounded overflow-hidden shadow-sm">
               <div className="bg-slate-50 p-4 border-b border-slate-200">
                 <h4 className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                  <span className="material-symbols-outlined text-accent text-base">info</span>
+                  <span className="material-symbols-outlined text-primary text-base">info</span>
                   Ringkasan Teknis
                 </h4>
               </div>
@@ -145,7 +145,7 @@ export default async function BlogDetailPage({
                   <span className="font-bold text-slate-800 uppercase tracking-wider">{article.readingTime}</span>
                 </div>
                 <div className="pt-3 border-t border-slate-200 mt-2">
-                  <Link className="text-accent hover:underline font-bold uppercase tracking-wider flex items-center gap-1" href="/downloads">
+                  <Link className="text-primary hover:underline font-bold uppercase tracking-wider flex items-center gap-1" href="/downloads">
                     Tabel Dimensi &amp; Unduhan <span className="material-symbols-outlined text-sm">arrow_forward</span>
                   </Link>
                 </div>
@@ -156,13 +156,13 @@ export default async function BlogDetailPage({
               <div className="absolute -right-12 -bottom-12 opacity-5">
                 <span className="material-symbols-outlined text-[160px]">chat</span>
               </div>
-              <span className="text-accent font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Engineering Support</span>
+              <span className="text-slate-300 font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Engineering Support</span>
               <h4 className="font-technical-data text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Butuh Bantuan Spesifikasi?</h4>
               <p className="font-body-md text-xs text-slate-300 opacity-90 mb-8 relative z-10 leading-relaxed">
                 Kirim detail kebutuhan ukuran (DN/NPS), standard (ANSI/JIS/DIN), rating pressure, dan material steel ke sales engineer kami untuk review gratis.
               </p>
               <Link
-                className="inline-flex items-center justify-center gap-2 w-full py-3 bg-accent text-white font-technical-data text-xs font-bold uppercase tracking-wider rounded hover:bg-accent/90 transition-colors shadow-md shadow-accent/25 relative z-10"
+                className="inline-flex items-center justify-center gap-2 w-full py-3 bg-secondary text-white font-technical-data text-xs font-bold uppercase tracking-wider rounded hover:bg-slate-900 transition-colors shadow-md shadow-secondary/25 relative z-10"
                 href="/contact"
               >
                 <span className="material-symbols-outlined text-base">engineering</span>

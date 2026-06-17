@@ -44,14 +44,14 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-12 border-b border-slate-100 pb-8">
             <div>
-              <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Featured Catalog</span>
+              <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Featured Catalog</span>
               <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Katalog Produk Utama</h2>
               <p className="font-body-md text-xs text-slate-500 leading-relaxed">
                 Komponen presisi dengan spesifikasi teknis lengkap, siap memenuhi standard industri.
               </p>
             </div>
             <Link
-              className="font-technical-data text-xs font-bold uppercase tracking-wider text-accent flex items-center gap-2 group hover:underline decoration-accent underline-offset-4"
+              className="font-technical-data text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-2 group hover:underline decoration-primary underline-offset-4"
               href="/products"
             >
               Lihat Katalog Lengkap{" "}
@@ -73,9 +73,9 @@ export default function Home() {
       <section className="bg-slate-50 py-20 border-y border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-16">
-            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Why Partner With Us</span>
+            <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Why Partner With Us</span>
             <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Mengapa Memilih PERONIKS?</h2>
-            <div className="w-12 h-1 bg-accent mx-auto" />
+            <div className="w-12 h-1 bg-primary mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
@@ -85,8 +85,8 @@ export default function Home() {
               { icon: "rule", title: "Kontrol Kualitas", desc: "Inspeksi dimensional lengkap sebelum pengiriman ke customer." },
               { icon: "local_shipping", title: "Logistik Andal", desc: "Pengiriman aman tepat waktu ke seluruh wilayah Indonesia." },
             ].map((x) => (
-              <div key={x.title} className="flex flex-col items-center text-center p-6 bg-white border border-slate-200 hover:border-accent/30 rounded shadow-sm hover:shadow-md transition-all duration-200">
-                <div className="bg-slate-50 p-3 rounded-full text-accent mb-4 border border-slate-100 flex items-center justify-center">
+              <div key={x.title} className="flex flex-col items-center text-center p-6 bg-white border border-slate-200 hover:border-primary/30 rounded shadow-sm hover:shadow-md transition-all duration-200">
+                <div className="bg-primary/5 p-3 rounded-full text-primary mb-4 border border-primary/10 flex items-center justify-center">
                   <span className="material-symbols-outlined text-3xl">{x.icon}</span>
                 </div>
                 <h4 className="font-technical-data text-sm font-bold text-primary mb-2">{x.title}</h4>
@@ -101,9 +101,9 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-16">
-            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Production Capabilities</span>
+            <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Production Capabilities</span>
             <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Kapasitas Manufaktur Kami</h2>
-            <div className="w-12 h-1 bg-accent mx-auto" />
+            <div className="w-12 h-1 bg-primary mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -132,7 +132,7 @@ export default function Home() {
                 image: "/images/quality-control.png"
               }
             ].map((cap) => (
-              <div key={cap.title} className="group bg-slate-50 border border-slate-200 hover:border-accent/40 rounded overflow-hidden shadow-sm flex flex-col h-full transition-all duration-300">
+              <div key={cap.title} className="group bg-slate-50 border border-slate-200 hover:border-primary/40 rounded overflow-hidden shadow-sm flex flex-col h-full transition-all duration-300">
                 <div className="aspect-[16/10] w-full overflow-hidden relative">
                   <Image
                     src={cap.image}
@@ -144,7 +144,7 @@ export default function Home() {
                 </div>
                 <div className="p-5 flex-1 flex flex-col">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="material-symbols-outlined text-accent text-lg">{cap.icon}</span>
+                    <span className="material-symbols-outlined text-primary text-lg">{cap.icon}</span>
                     <h4 className="font-technical-data text-sm font-bold text-primary">{cap.title}</h4>
                   </div>
                   <p className="font-body-md text-xs text-slate-500 leading-relaxed mb-4">
@@ -161,9 +161,9 @@ export default function Home() {
       <section className="py-20 bg-slate-50 border-y border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-16">
-            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Industries We Serve</span>
+            <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Industries We Serve</span>
             <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Industri Yang Kami Layani</h2>
-            <div className="w-12 h-1 bg-accent mx-auto" />
+            <div className="w-12 h-1 bg-primary mx-auto" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {[
@@ -174,8 +174,8 @@ export default function Home() {
               { icon: "directions_boat", label: "Marine Service", desc: "Standard lambung & deck" },
               { icon: "precision_manufacturing", label: "Manufacturing", desc: "Piping utilitas pabrik" },
             ].map((ind) => (
-              <div key={ind.label} className="bg-white border border-slate-200 hover:border-accent/30 rounded p-6 text-center hover:shadow-md transition-all duration-300 flex flex-col items-center">
-                <div className="bg-slate-50 p-3 rounded text-accent mb-4 flex items-center justify-center">
+              <div key={ind.label} className="bg-white border border-slate-200 hover:border-primary/30 rounded p-6 text-center hover:shadow-md transition-all duration-300 flex flex-col items-center">
+                <div className="bg-primary/5 p-3 rounded text-primary mb-4 flex items-center justify-center">
                   <span className="material-symbols-outlined text-3xl">{ind.icon}</span>
                 </div>
                 <h4 className="font-technical-data text-xs font-bold text-primary mb-1">{ind.label}</h4>
@@ -193,9 +193,9 @@ export default function Home() {
             <div>
               <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
                 <h2 className="font-technical-data text-lg font-bold text-primary flex items-center gap-3">
-                  <span className="material-symbols-outlined text-accent">book</span> Knowledge Center
+                  <span className="material-symbols-outlined text-primary">book</span> Knowledge Center
                 </h2>
-                <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-accent" href="/blog">
+                <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-primary" href="/blog">
                   Lihat Semua Artikel
                 </Link>
               </div>
@@ -209,9 +209,9 @@ export default function Home() {
             <div>
               <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
                 <h2 className="font-technical-data text-lg font-bold text-primary flex items-center gap-3">
-                  <span className="material-symbols-outlined text-accent">download</span> Engineering Tools
+                  <span className="material-symbols-outlined text-primary">download</span> Engineering Tools
                 </h2>
-                <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-accent" href="/downloads">
+                <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-primary" href="/downloads">
                   Engineering Downloads
                 </Link>
               </div>
@@ -221,7 +221,7 @@ export default function Home() {
                     <DownloadCard key={d.id} item={d} />
                   ))}
                 </div>
-                <div className="mt-6 p-4 bg-accent/5 rounded border border-accent/15">
+                <div className="mt-6 p-4 bg-slate-100 rounded border border-slate-200">
                   <p className="font-body-md text-xs text-slate-600 italic leading-relaxed">
                     &quot;Gunakan tabel dimensi ini untuk memvalidasi spesifikasi engineering Anda sebelum melakukan
                     pemesanan. Tim support teknik kami siap membantu verifikasi material.&quot;
@@ -246,15 +246,15 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute bottom-6 left-6 bg-[#0B192C] text-white py-2.5 px-4 rounded border border-slate-800 shadow-xl z-10">
+              <div className="absolute bottom-6 left-6 bg-[#0F2942] text-white py-2.5 px-4 rounded border border-slate-800 shadow-xl z-10">
                 <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-accent text-lg">check_circle</span>
+                  <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
                   <span className="font-technical-data text-[10px] uppercase tracking-wider font-bold">100% Quality Inspected</span>
                 </div>
               </div>
             </div>
             <div>
-              <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">QA/QC Control</span>
+              <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">QA/QC Control</span>
               <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-6">Manufaktur &amp; Pengawasan Kualitas</h2>
               <p className="font-body-lg text-sm text-slate-500 mb-8 leading-relaxed">
                 Setiap komponen melewati serangkaian pengujian dan verifikasi laboratorium. Kami berkomitmen membantu tim engineering memastikan integrasi sempurna pada sistem perpipaan dengan kontrol toleransi dimensional dan audit material yang ketat.
@@ -271,7 +271,7 @@ export default function Home() {
                   },
                 ].map((x) => (
                   <div key={x.title} className="flex gap-4">
-                    <div className="bg-accent/15 p-2 rounded text-accent flex items-center justify-center shrink-0 h-10 w-10">
+                    <div className="bg-primary/10 p-2 rounded text-primary flex items-center justify-center shrink-0 h-10 w-10">
                       <span className="material-symbols-outlined text-lg">done_all</span>
                     </div>
                     <div>
@@ -292,7 +292,7 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-gutter relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Get a Quote Today</span>
+              <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Get a Quote Today</span>
               <h2 className="font-technical-data text-3xl md:text-5xl text-slate-900 font-extrabold mt-2 mb-6 leading-[1.15]">
                 Butuh Penawaran Harga Hari Ini?
               </h2>
@@ -301,20 +301,20 @@ export default function Home() {
               </p>
               <div className="space-y-4 mb-8 text-xs font-technical-data uppercase tracking-wider text-slate-700">
                 <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-accent">location_on</span>
+                  <span className="material-symbols-outlined text-primary">location_on</span>
                   <span>{siteConfig.address}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-accent">mail</span>
+                  <span className="material-symbols-outlined text-primary">mail</span>
                   <span>{siteConfig.email}</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="material-symbols-outlined text-accent">call</span>
+                  <span className="material-symbols-outlined text-primary">call</span>
                   <span>{siteConfig.phone}</span>
                 </div>
               </div>
               <a
-                className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-accent/20"
+                className="inline-flex items-center gap-2 bg-primary text-white hover:bg-secondary px-8 py-4 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-primary/20"
                 href={siteConfig.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -325,10 +325,10 @@ export default function Home() {
             <div className="bg-white border border-slate-200 rounded p-3 h-[380px] overflow-hidden shadow-md relative">
               <div className="w-full h-full bg-slate-100 relative rounded overflow-hidden">
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-white/90 backdrop-blur-[1px]">
-                  <span className="material-symbols-outlined text-5xl text-accent mb-4">map</span>
+                  <span className="material-symbols-outlined text-5xl text-primary mb-4">map</span>
                   <h4 className="font-technical-data text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider">Lokasi Kantor &amp; Workshop</h4>
                   <p className="text-slate-600 text-xs font-body-md mb-6 max-w-sm leading-relaxed">Terletak strategis di pusat manufaktur dan distribusi industri Indonesia.</p>
-                  <Link className="bg-primary hover:bg-accent text-white px-6 py-2.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-colors duration-200" href="/contact">
+                  <Link className="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-colors duration-200" href="/contact">
                     Buka Detail Kontak &amp; Peta
                   </Link>
                 </div>

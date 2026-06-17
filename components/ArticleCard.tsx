@@ -4,7 +4,7 @@ import type { Article } from "@/lib/types";
 
 export function ArticleCard({ article }: { article: Article }) {
   return (
-    <article className="group bg-white border border-slate-200 hover:border-accent/40 rounded overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
+    <article className="group bg-white border border-slate-200 hover:border-primary/40 rounded overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="aspect-[16/9] w-full bg-slate-100 overflow-hidden relative border-b border-slate-100">
         <Image
           src={article.featuredImage}
@@ -17,7 +17,7 @@ export function ArticleCard({ article }: { article: Article }) {
           <span className="bg-primary text-white text-[9px] font-technical-data px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
             {article.category}
           </span>
-          <span className="bg-accent text-white text-[9px] font-technical-data px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
+          <span className="bg-secondary text-white text-[9px] font-technical-data px-2 py-0.5 rounded-sm font-bold uppercase tracking-wider">
             Technical
           </span>
         </div>
@@ -34,7 +34,7 @@ export function ArticleCard({ article }: { article: Article }) {
           </span>
         </div>
         
-        <h3 className="font-technical-data text-base font-bold text-primary mb-3 line-clamp-2 group-hover:text-accent transition-colors duration-200 leading-snug">
+        <h3 className="font-technical-data text-base font-bold text-primary mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-200 leading-snug">
           {article.title}
         </h3>
         
@@ -43,7 +43,7 @@ export function ArticleCard({ article }: { article: Article }) {
         </p>
         
         <Link 
-          className="mt-auto inline-flex items-center gap-1 text-xs font-technical-data font-bold uppercase tracking-wider text-primary group-hover/btn:text-accent hover:text-accent transition-colors"
+          className="mt-auto inline-flex items-center gap-1 text-xs font-technical-data font-bold uppercase tracking-wider text-primary group-hover/btn:text-secondary hover:text-secondary transition-colors"
           href={`/blog/${article.slug}`}
         >
           Baca Selengkapnya 

@@ -63,7 +63,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                 ref={inputRef}
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                className="w-full pl-11 pr-20 py-2.5 bg-slate-50 border border-slate-200 hover:border-primary/20 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded font-technical-data text-xs transition-all duration-200 shadow-inner"
+                className="w-full pl-11 pr-20 py-2.5 bg-slate-50 border border-slate-200 hover:border-primary/20 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded font-technical-data text-xs transition-all duration-200 shadow-inner"
                 placeholder="Cari artikel teknik (e.g. ASTM A182)..."
                 type="text"
               />
@@ -82,9 +82,9 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
             <button
               key={c.label}
               onClick={() => setQ(c.label)}
-              className="flex flex-col items-center p-5 bg-white border border-slate-200 hover:border-accent/40 rounded hover:shadow-sm transition-all duration-200 text-center group cursor-pointer"
+              className="flex flex-col items-center p-5 bg-white border border-slate-200 hover:border-primary/40 rounded hover:shadow-sm transition-all duration-200 text-center group cursor-pointer"
             >
-              <span className="material-symbols-outlined text-2xl mb-3 text-slate-400 group-hover:text-accent transition-colors duration-200">
+              <span className="material-symbols-outlined text-2xl mb-3 text-slate-400 group-hover:text-secondary transition-colors duration-200">
                 {c.icon}
               </span>
               <span className="font-technical-data text-[10px] uppercase tracking-wider font-bold text-slate-700">{c.label}</span>
@@ -95,14 +95,14 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8 space-y-16">
             <div className="space-y-4">
-              <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Featured Article</span>
+              <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Featured Article</span>
               <ArticleCard article={featured} />
             </div>
 
             <div>
               <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
                 <h3 className="font-technical-data text-base font-bold text-primary flex items-center gap-2">
-                  <span className="material-symbols-outlined text-accent">library_books</span>
+                  <span className="material-symbols-outlined text-primary">library_books</span>
                   Engineering Library
                 </h3>
                 <span className="text-slate-400 font-technical-data text-[10px] uppercase tracking-wider font-bold">
@@ -118,9 +118,9 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                     className="group flex flex-col md:flex-row md:items-center justify-between p-4 bg-white hover:bg-slate-50 transition-colors duration-150 gap-2"
                   >
                     <div className="flex items-start gap-3">
-                      <span className="material-symbols-outlined text-slate-400 mt-0.5 text-lg group-hover:text-accent transition-colors duration-200">description</span>
+                      <span className="material-symbols-outlined text-slate-400 mt-0.5 text-lg group-hover:text-secondary transition-colors duration-200">description</span>
                       <div>
-                        <h4 className="font-technical-data text-xs font-bold text-primary group-hover:text-accent transition-colors duration-200 leading-snug">
+                        <h4 className="font-technical-data text-xs font-bold text-primary group-hover:text-secondary transition-colors duration-200 leading-snug">
                           {a.title}
                         </h4>
                         <p className="text-[10px] text-slate-400 font-technical-data uppercase tracking-wider font-semibold mt-1">
@@ -150,7 +150,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
             <div className="bg-white border border-slate-200 rounded overflow-hidden shadow-sm">
               <div className="bg-slate-50 p-4 border-b border-slate-200">
                 <h4 className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
-                  <span className="material-symbols-outlined text-accent text-base">trending_up</span>
+                  <span className="material-symbols-outlined text-primary text-base">trending_up</span>
                   Spesifikasi Terpopuler
                 </h4>
               </div>
@@ -165,10 +165,10 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                         rel="noopener noreferrer"
                       >
                         <div className="flex flex-col pr-4">
-                          <span className="font-technical-data text-[11px] text-primary font-bold leading-tight group-hover:text-accent transition-colors duration-200">{d.title}</span>
+                          <span className="font-technical-data text-[11px] text-primary font-bold leading-tight group-hover:text-secondary transition-colors duration-200">{d.title}</span>
                           <span className="text-[10px] text-slate-400 font-body-md mt-0.5 leading-snug line-clamp-1">{d.description}</span>
                         </div>
-                        <span className="material-symbols-outlined text-slate-400 group-hover:text-accent transition-colors text-lg shrink-0">
+                        <span className="material-symbols-outlined text-slate-400 group-hover:text-secondary transition-colors text-lg shrink-0">
                           download
                         </span>
                       </a>
@@ -182,13 +182,13 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
               <div className="absolute -right-12 -bottom-12 opacity-5">
                 <span className="material-symbols-outlined text-[160px]">engineering</span>
               </div>
-              <span className="text-accent font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Engineering Support</span>
+              <span className="text-slate-300 font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Engineering Support</span>
               <h4 className="font-technical-data text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Butuh Bantuan Teknis?</h4>
               <p className="font-body-md text-xs text-slate-300 opacity-90 mb-8 relative z-10 leading-relaxed">
                 Tim sales engineer kami siap membantu memilih spesifikasi material, sertifikasi, dan standardisasi flange/piping yang tepat untuk proyek Anda.
               </p>
               <Link
-                className="inline-flex items-center justify-center gap-2 w-full py-3 bg-accent text-white font-technical-data text-xs font-bold uppercase tracking-wider rounded hover:bg-accent/90 transition-colors shadow-md shadow-accent/25 relative z-10"
+                className="inline-flex items-center justify-center gap-2 w-full py-3 bg-secondary text-white font-technical-data text-xs font-bold uppercase tracking-wider rounded hover:bg-slate-900 transition-colors shadow-md shadow-secondary/25 relative z-10"
                 href="/contact"
               >
                 <span className="material-symbols-outlined text-base">chat</span>
@@ -211,7 +211,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                 <p className="text-[11px] text-slate-500 leading-relaxed font-body-md">
                   Dokumen teknis komparatif pemilihan grade stainless steel AISI 304, 316, 316L untuk mengurangi risiko korosi klorida.
                 </p>
-                <Link className="text-accent hover:underline font-technical-data text-xs font-bold uppercase tracking-wider flex items-center gap-1.5" href="/downloads">
+                <Link className="text-primary hover:underline font-technical-data text-xs font-bold uppercase tracking-wider flex items-center gap-1.5" href="/downloads">
                   Unduh Whitepaper <span className="material-symbols-outlined text-sm">open_in_new</span>
                 </Link>
               </div>

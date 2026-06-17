@@ -40,7 +40,7 @@ export function DownloadsClient({ downloads }: { downloads: Download[] }) {
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                className="w-full pl-11 pr-4 py-2.5 bg-slate-50 border border-slate-200 hover:border-primary/20 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded font-technical-data text-xs transition-all duration-200 shadow-inner"
+                className="w-full pl-11 pr-4 py-2.5 bg-slate-50 border border-slate-200 hover:border-primary/20 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded font-technical-data text-xs transition-all duration-200 shadow-inner"
                 placeholder="Cari dokumen teknik (contoh: ANSI B16.5, MTC)..."
                 type="text"
               />
@@ -52,7 +52,7 @@ export function DownloadsClient({ downloads }: { downloads: Download[] }) {
       <main className="max-w-container-max mx-auto px-gutter py-16">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
           <div>
-            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Engineering Resource Center</span>
+            <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Engineering Resource Center</span>
             <h1 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Pusat Unduhan Dokumen Teknik</h1>
             <p className="text-slate-500 font-body-md text-xs leading-relaxed max-w-xl">
               Referensi spesifikasi, standar material, toleransi dimensi flange dan fitting stainless steel untuk memvalidasi detail proyek Anda.
@@ -63,7 +63,7 @@ export function DownloadsClient({ downloads }: { downloads: Download[] }) {
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="bg-slate-50 border border-slate-200 rounded px-3 py-2 text-xs font-technical-data font-bold text-slate-700 focus:border-accent focus:outline-none transition-colors"
+              className="bg-slate-50 border border-slate-200 rounded px-3 py-2 text-xs font-technical-data font-bold text-slate-700 focus:border-primary focus:outline-none transition-colors"
             >
               <option value="">Semua Dokumen</option>
               {categories.map((c) => (

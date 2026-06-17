@@ -14,7 +14,7 @@ export default function AboutPage() {
     <>
       <section className="bg-white py-16 border-b border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
-          <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Company Profile</span>
+          <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Company Profile</span>
           <h1 className="font-technical-data text-3xl md:text-5xl text-primary font-extrabold mt-2 mb-4">Tentang PERONIKS</h1>
           <p className="font-body-lg text-slate-500 max-w-3xl leading-relaxed text-sm md:text-base">
             PERONIKS adalah produsen dan supplier komponen perpipaan industrial presisi tinggi di Indonesia. Kami memproduksi stainless steel flanges, pipe fittings, ball valves, serta menyediakan layanan custom CNC machining untuk kebutuhan engineering.
@@ -35,7 +35,7 @@ export default function AboutPage() {
 
               <section className="bg-slate-50 border border-slate-200 rounded p-8">
                 <h3 className="font-technical-data text-base font-bold text-primary mb-6 uppercase tracking-wider flex items-center gap-2">
-                  <span className="material-symbols-outlined text-accent text-xl">verified</span> Nilai Utama Kami
+                  <span className="material-symbols-outlined text-primary text-xl">verified</span> Nilai Utama Kami
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {[
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 </p>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow-lg shadow-accent/20"
+                  className="inline-flex items-center gap-2 bg-secondary text-white hover:bg-primary px-6 py-3 rounded font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow-lg shadow-secondary/20"
                 >
                   Hubungi Sales Engineer <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <Image src="/images/factory-hero.png" alt="Factory" fill className="object-cover" />
               </div>
               <div className="p-4">
-                <div className="font-technical-data text-[10px] text-accent font-bold uppercase tracking-wider mb-2">
+                <div className="font-technical-data text-[10px] text-primary font-bold uppercase tracking-wider mb-2">
                   Workshop &amp; Logistik
                 </div>
                 <div className="font-technical-data text-xs font-bold text-primary mb-2 leading-snug">{siteConfig.address}</div>
@@ -87,7 +87,7 @@ export default function AboutPage() {
               <div className="absolute -right-12 -bottom-12 opacity-5">
                 <span className="material-symbols-outlined text-[160px]">precision_manufacturing</span>
               </div>
-              <span className="text-accent font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Quick Navigation</span>
+              <span className="text-slate-300 font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Quick Navigation</span>
               <h4 className="font-technical-data text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Katalog &amp; Data Teknik</h4>
               <p className="font-body-md text-xs text-slate-300 opacity-90 mb-8 relative z-10 leading-relaxed">
                 Pelajari standar dimensi, rating pressure, dan chemical composition material stainless steel di halaman katalog dan download tools kami.

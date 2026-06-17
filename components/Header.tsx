@@ -40,7 +40,7 @@ export function Header() {
                 href={item.href}
                 className={`transition-all duration-200 font-technical-data text-xs uppercase tracking-wider font-semibold border-b-2 py-1 ${
                   isActive
-                    ? "text-accent border-accent"
+                    ? "text-primary border-primary"
                     : "text-primary/70 border-transparent hover:text-primary hover:border-primary/20"
                 }`}
               >
@@ -55,7 +55,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <Link
             href="/contact"
-            className="hidden lg:inline-flex bg-primary text-on-primary hover:bg-accent hover:text-white px-6 py-2.5 rounded-lg font-body-md font-semibold transition-all duration-200 active:scale-95 shadow-md shadow-primary/10 hover:shadow-accent/10"
+            className="hidden lg:inline-flex bg-primary text-on-primary hover:bg-secondary hover:text-white px-6 py-2.5 rounded-lg font-body-md font-semibold transition-all duration-200 active:scale-95 shadow-md shadow-primary/10 hover:shadow-primary/20"
           >
             Minta Penawaran
           </Link>

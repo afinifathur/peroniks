@@ -17,7 +17,7 @@ export default function ContactPage() {
     <>
       <section className="bg-white py-16 border-b border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
-          <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Contact Us</span>
+          <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Contact Us</span>
           <h1 className="font-technical-data text-3xl md:text-5xl text-primary font-extrabold mt-2 mb-4">Hubungi Kami</h1>
           <p className="font-body-lg text-slate-500 max-w-3xl leading-relaxed text-sm md:text-base">
             Hubungi tim support teknis dan sales kami untuk mendapatkan konsultasi spesifikasi piping atau permintaan penawaran harga resmi (RFQ) cepat kurang dari 24 jam.
@@ -43,26 +43,26 @@ export default function ContactPage() {
               <h3 className="font-technical-data text-base font-bold text-primary mb-6 uppercase tracking-wider">Informasi Kontak</h3>
               <div className="space-y-6 text-slate-600">
                 <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-accent text-xl mt-0.5">location_on</span>
+                  <span className="material-symbols-outlined text-primary text-xl mt-0.5">location_on</span>
                   <div>
                     <div className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider mb-1">Kantor &amp; Workshop</div>
                     <div className="text-xs leading-relaxed font-body-md">{siteConfig.address}</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-accent text-xl mt-0.5">mail</span>
+                  <span className="material-symbols-outlined text-primary text-xl mt-0.5">mail</span>
                   <div>
                     <div className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider mb-1">Email Resmi</div>
-                    <a className="text-xs hover:text-accent font-technical-data font-bold transition-colors" href={`mailto:${siteConfig.email}`}>
+                    <a className="text-xs hover:text-primary font-technical-data font-bold transition-colors" href={`mailto:${siteConfig.email}`}>
                       {siteConfig.email}
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <span className="material-symbols-outlined text-accent text-xl mt-0.5">call</span>
+                  <span className="material-symbols-outlined text-primary text-xl mt-0.5">call</span>
                   <div>
                     <div className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider mb-1">Telepon</div>
-                    <a className="text-xs hover:text-accent font-technical-data font-bold transition-colors" href={`tel:${siteConfig.phone}`}>
+                    <a className="text-xs hover:text-primary font-technical-data font-bold transition-colors" href={`tel:${siteConfig.phone}`}>
                       {siteConfig.phone}
                     </a>
                   </div>

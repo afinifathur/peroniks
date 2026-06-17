@@ -20,7 +20,7 @@ export function ContactForm() {
           <div>
             <label className="font-technical-data text-[10px] text-slate-400 font-bold uppercase tracking-wider">Nama Kontak</label>
             <input
-              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
+              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
               placeholder="Contoh: Budi Santoso"
               name="name"
               required
@@ -29,7 +29,7 @@ export function ContactForm() {
           <div>
             <label className="font-technical-data text-[10px] text-slate-400 font-bold uppercase tracking-wider">Perusahaan / CV / PT</label>
             <input
-              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
+              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
               placeholder="Contoh: PT Engineering Maju"
               name="company"
               required
@@ -40,7 +40,7 @@ export function ContactForm() {
           <div>
             <label className="font-technical-data text-[10px] text-slate-400 font-bold uppercase tracking-wider">Alamat Email</label>
             <input
-              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
+              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
               placeholder="budi@perusahaan.co.id"
               type="email"
               name="email"
@@ -50,7 +50,7 @@ export function ContactForm() {
           <div>
             <label className="font-technical-data text-[10px] text-slate-400 font-bold uppercase tracking-wider">Nomor WhatsApp / Hp</label>
             <input
-              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
+              className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner"
               placeholder="Contoh: 081234567890"
               name="whatsapp"
               required
@@ -60,7 +60,7 @@ export function ContactForm() {
         <div>
           <label className="font-technical-data text-[10px] text-slate-400 font-bold uppercase tracking-wider">Rincian Spesifikasi Piping (Standard, Class, Material, Qty)</label>
           <textarea
-            className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner min-h-[140px] leading-relaxed"
+            className="mt-1.5 w-full bg-slate-50 border border-slate-200 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded-sm px-3.5 py-2.5 font-technical-data text-xs transition-all duration-200 shadow-inner min-h-[140px] leading-relaxed"
             placeholder="Contoh: Slip On Flange, JIS 10K, DN100 (4 inch), Material SS316, Qty 15 pcs. Dilengkapi MTC."
             name="message"
             required
@@ -77,7 +77,7 @@ export function ContactForm() {
           </a>
           <button
             type="submit"
-            className="flex items-center justify-center gap-2 bg-accent text-white hover:bg-accent/90 px-6 py-3 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow-lg shadow-accent/15 cursor-pointer"
+            className="flex items-center justify-center gap-2 bg-secondary text-white hover:bg-primary px-6 py-3 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow-lg shadow-secondary/15 cursor-pointer"
           >
             <span className="material-symbols-outlined text-sm">send</span> Submit Form
           </button>

@@ -61,7 +61,7 @@ export function ProductsClient({
               <input
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
-                className="w-full pl-11 pr-4 py-2.5 bg-slate-50 border border-slate-200 hover:border-primary/20 focus:border-accent focus:bg-white focus:outline-none focus:ring-0 rounded font-technical-data text-xs transition-all duration-200 shadow-inner"
+                className="w-full pl-11 pr-4 py-2.5 bg-slate-50 border border-slate-200 hover:border-primary/20 focus:border-primary focus:bg-white focus:outline-none focus:ring-0 rounded font-technical-data text-xs transition-all duration-200 shadow-inner"
                 placeholder="Cari produk (contoh: Weld Neck, Ball Valve)..."
                 type="text"
               />
@@ -73,7 +73,7 @@ export function ProductsClient({
       <main className="max-w-container-max mx-auto px-gutter py-16">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
           <div>
-            <span className="text-accent font-technical-data text-xs uppercase tracking-widest font-bold">Product Catalog</span>
+            <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Product Catalog</span>
             <h1 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Spesifikasi Flange, Fitting &amp; Valve</h1>
             <p className="text-slate-500 font-body-md text-xs leading-relaxed max-w-xl">
               Komponen perpipaan stainless steel berkualitas tinggi. Siap melayani pemesanan skala proyek dan custom CNC machining dengan toleransi presisi.
@@ -84,7 +84,7 @@ export function ProductsClient({
             <select
               value={category}
               onChange={(e) => setCategory(e.target.value)}
-              className="bg-slate-50 border border-slate-200 rounded px-3 py-2 text-xs font-technical-data font-bold text-slate-700 focus:border-accent focus:outline-none transition-colors"
+              className="bg-slate-50 border border-slate-200 rounded px-3 py-2 text-xs font-technical-data font-bold text-slate-700 focus:border-primary focus:outline-none transition-colors"
             >
               <option value="">Semua Kategori</option>
               {categories.map((c) => (
@@ -96,10 +96,10 @@ export function ProductsClient({
           </div>
         </div>
 
-        <div className="mb-8 p-4 bg-accent/5 rounded border border-accent/15">
+        <div className="mb-8 p-4 bg-slate-50 rounded border border-slate-200">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
             <div className="text-slate-600 text-xs font-technical-data uppercase tracking-wider font-bold">
-              Menampilkan <span className="text-accent">{filtered.length}</span> item dari total {products.length}
+              Menampilkan <span className="text-primary">{filtered.length}</span> item dari total {products.length}
             </div>
             {(q || category) && (
               <button
@@ -107,7 +107,7 @@ export function ProductsClient({
                   setQ("");
                   setCategory("");
                 }}
-                className="text-primary hover:text-accent font-technical-data text-xs font-bold uppercase tracking-wider text-left transition-colors"
+                className="text-primary hover:text-secondary font-technical-data text-xs font-bold uppercase tracking-wider text-left transition-colors"
               >
                 Reset filter
               </button>

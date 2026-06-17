@@ -29,7 +29,7 @@ export function ProductCard({ product }: { product: Product }) {
   }
 
   return (
-    <div className="group bg-white border border-slate-200 hover:border-accent/40 rounded overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
+    <div className="group bg-white border border-slate-200 hover:border-primary/40 rounded overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full">
       <div className="aspect-square bg-slate-50 p-6 flex items-center justify-center overflow-hidden border-b border-slate-100 relative">
         <Image
           alt={product.name}
@@ -45,7 +45,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-technical-data text-sm font-bold text-primary mb-2 line-clamp-1 group-hover:text-accent transition-colors duration-200">
+        <h3 className="font-technical-data text-sm font-bold text-primary mb-2 line-clamp-1 group-hover:text-primary transition-colors duration-200">
           {product.name}
         </h3>
         <p className="font-body-md text-xs text-slate-500 mb-4 line-clamp-2 leading-relaxed">
@@ -74,7 +74,7 @@ export function ProductCard({ product }: { product: Product }) {
 
         <Link
           href={`/contact?product=${encodeURIComponent(product.name)}`}
-          className="mt-auto block w-full text-center bg-primary text-white hover:bg-accent py-2 rounded-sm text-[10px] font-technical-data font-bold uppercase tracking-wider transition-colors duration-200"
+          className="mt-auto block w-full text-center bg-primary text-white hover:bg-secondary py-2 rounded-sm text-[10px] font-technical-data font-bold uppercase tracking-wider transition-colors duration-200"
         >
           Minta Penawaran
         </Link>

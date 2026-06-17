@@ -17,7 +17,7 @@ export function HeaderSearch() {
         router.push(`/products?q=${encodeURIComponent(query)}`);
       }}
     >
-      <div className="flex items-center gap-2 bg-surface-container-low border border-border-subtle hover:border-primary/20 focus-within:border-accent focus-within:bg-white px-3 py-1.5 rounded-lg transition-all duration-200 shadow-inner">
+      <div className="flex items-center gap-2 bg-surface-container-low border border-border-subtle hover:border-primary/20 focus-within:border-primary focus-within:bg-white px-3 py-1.5 rounded-lg transition-all duration-200 shadow-inner">
         <span className="material-symbols-outlined text-on-surface-variant text-base">search</span>
         <input
           value={q}

@@ -15,12 +15,12 @@ export function Hero() {
       <div className="absolute inset-0 hero-overlay" />
       
       {/* Safety highlight line */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-accent" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-primary" />
 
       <div className="relative max-w-container-max mx-auto px-gutter w-full z-10">
         <div className="max-w-4xl">
-          <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent/15 border border-accent/30 text-accent rounded font-technical-data text-[10px] uppercase tracking-wider mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+          <span className="inline-flex items-center gap-2 px-3 py-1 bg-primary/20 border border-primary/40 text-white rounded font-technical-data text-[10px] uppercase tracking-wider mb-6">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             PT Peroni Karya Sentra — ISO 9001:2015 Certified
           </span>
           <h1 className="font-display-lg text-4xl md:text-6xl text-white font-extrabold tracking-tight leading-[1.15] mb-6">
@@ -35,7 +35,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Link
               href="/contact"
-              className="flex items-center justify-center gap-2 bg-accent text-white hover:bg-accent/90 px-8 py-3.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-accent/20"
+              className="flex items-center justify-center gap-2 bg-primary text-white hover:bg-secondary px-8 py-3.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-primary/20"
             >
               Minta Penawaran Cepat
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
@@ -60,7 +60,7 @@ export function Hero() {
               { icon: "settings_suggest", label: "CNC Machining & Supply" }
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-3">
-                <span className="material-symbols-outlined text-accent text-xl">{badge.icon}</span>
+                <span className="material-symbols-outlined text-primary text-xl">{badge.icon}</span>
                 <span className="font-technical-data text-[10px] text-slate-200 font-bold tracking-wider uppercase">
                   {badge.label}
                 </span>
