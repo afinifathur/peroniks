@@ -126,12 +126,12 @@ function generateArticleBody(title: string, category: ArticleCategory) {
 
 const authorPool = ["Tim Engineering PERONIKS", "PERONIKS Technical Desk", "Engineering Support Team"];
 const imagePool = [
-  "/images/stainless-steel-flange.jpg",
-  "/images/cnc-machining.jpg",
-  "/images/pipe-fittings.jpg",
-  "/images/ball-valves.jpg",
-  "/images/industrial-warehouse.jpg",
-  "/images/quality-control.jpg",
+  "/images/products/weld-neck-flange.png",
+  "/images/products/elbow.png",
+  "/images/products/tee.png",
+  "/images/products/reducer.png",
+  "/images/products/ball-valve.png",
+  "/images/products/blind-flange.png",
 ];
 
 type Topic = { title: string; category: ArticleCategory };

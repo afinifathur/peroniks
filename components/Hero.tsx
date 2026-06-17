@@ -3,13 +3,11 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 
 export function Hero() {
-  const waLink = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}`;
-
   return (
     <section className="relative min-h-[600px] md:h-[680px] flex items-center overflow-hidden py-12 md:py-0">
       <Image
-        alt="Industrial warehouse"
-        src="/images/industrial-warehouse.jpg"
+        alt="Industrial facility background"
+        src="/images/factory-hero.png"
         fill
         priority
         className="object-cover object-center scale-105"
@@ -23,17 +21,16 @@ export function Hero() {
         <div className="max-w-4xl">
           <span className="inline-flex items-center gap-2 px-3 py-1 bg-accent/15 border border-accent/30 text-accent rounded font-technical-data text-[10px] uppercase tracking-wider mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-            Indonesian Industrial Manufacturer &amp; Supplier
+            PT Peroni Karya Sentra — ISO 9001:2015 Certified
           </span>
           <h1 className="font-display-lg text-4xl md:text-6xl text-white font-extrabold tracking-tight leading-[1.15] mb-6">
-            Produsen &amp; Supplier <br className="hidden md:inline" />
+            Presisi &amp; Material <br className="hidden md:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-300">
-              Flange, Fitting &amp; Valve
-            </span> <br />
-            Stainless Steel Presisi
+              Traceability Sejak 1997
+            </span>
           </h1>
           <p className="font-body-lg text-base md:text-lg text-slate-300 mb-8 max-w-3xl leading-relaxed">
-            Komponen perpipaan spesifikasi engineering dengan jaminan material traceability (MTC 3.1) dan ketelitian dimensi tinggi. Melayani kebutuhan proyek, maintenance pabrik, kontraktor, dan procurement seluruh Indonesia.
+            Produsen dan supplier spesialis stainless steel flange, fittings, dan valves dengan toleransi dimensional ketat, jaminan sertifikat material (MTC 3.1), dan dukungan custom CNC machining untuk kebutuhan industri nasional.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <Link
@@ -44,7 +41,7 @@ export function Hero() {
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
             <a
-              href={waLink}
+              href={siteConfig.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 bg-slate-900/60 text-white border border-slate-700/60 hover:bg-slate-900/90 hover:border-slate-600 px-8 py-3.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0 backdrop-blur-sm"
@@ -57,10 +54,10 @@ export function Hero() {
           {/* Trust Badges */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-slate-700/50 pt-8">
             {[
-              { icon: "verified", label: "ISO 9001 QC Certified" },
-              { icon: "shield", label: "SS304/SS316 Specialist" },
-              { icon: "settings_suggest", label: "Custom CNC Machining" },
-              { icon: "speed", label: "24h Response Guarantee" }
+              { icon: "history", label: "Established 1997" },
+              { icon: "verified", label: "ISO 9001:2015 Certified" },
+              { icon: "shield", label: "SS304 / SS316 Specialist" },
+              { icon: "settings_suggest", label: "CNC Machining & Supply" }
             ].map((badge) => (
               <div key={badge.label} className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-accent text-xl">{badge.icon}</span>

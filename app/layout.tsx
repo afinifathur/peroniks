@@ -33,13 +33,13 @@ export const metadata: Metadata = {
     title: `${siteConfig.name} | Flange, Fitting & Valve Stainless Steel`,
     description: siteConfig.description,
     url: siteConfig.baseUrl,
-    images: [{ url: "/images/industrial-warehouse.jpg", width: 1200, height: 630, alt: "PERONIKS Industrial" }],
+    images: [{ url: "/images/factory-hero.png", width: 1200, height: 630, alt: "PT Peroni Karya Sentra" }],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} | Flange, Fitting & Valve Stainless Steel`,
     description: siteConfig.description,
-    images: ["/images/industrial-warehouse.jpg"],
+    images: ["/images/factory-hero.png"],
   },
 };
 
@@ -57,8 +57,8 @@ export default function RootLayout({
     telephone: siteConfig.phone,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Bekasi",
-      addressRegion: "Jawa Barat",
+      addressLocality: "Mojokerto",
+      addressRegion: "Jawa Timur",
       addressCountry: "ID",
       streetAddress: siteConfig.address,
     },

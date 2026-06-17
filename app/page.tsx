@@ -13,7 +13,6 @@ export default function Home() {
   const topProducts = products.slice(0, 4);
   const latestArticles = articles.slice(0, 2);
   const topDownloads = downloads.slice(0, 3);
-  const waLink = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}`;
 
   return (
     <>
@@ -26,7 +25,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { value: "5,000+", label: "Produk Ready Stock", desc: "Flange, Fittings & Valves" },
-              { value: "15+ Tahun", label: "Pengalaman Industri", desc: "Manufaktur & Supply" },
+              { value: "Sejak 1997", label: "Pengalaman Industri", desc: "Manufaktur & Supply" },
               { value: "< 24 Jam", label: "Respon Penawaran", desc: "Cepat & Tepat Waktu" },
               { value: "100%", label: "Material Traceable", desc: "Dilengkapi Sertifikat MTC" },
             ].map((stat, i) => (
@@ -112,25 +111,25 @@ export default function Home() {
                 icon: "settings_suggest",
                 title: "Custom CNC Machining",
                 desc: "Pengerjaan bubut, milling, dan drilling presisi tinggi untuk material stainless steel custom.",
-                image: "/images/cnc-machining.jpg"
+                image: "/images/cnc-machining.png"
               },
               {
                 icon: "factory",
                 title: "Flange Manufacturing",
                 desc: "Pembuatan blind flanges, slip-on, weld neck, socket weld standard JIS, ANSI, DIN, PN.",
-                image: "/images/stainless-steel-flange.jpg"
+                image: "/images/products/weld-neck-flange.png"
               },
               {
                 icon: "hardware",
                 title: "Valve Customization",
                 desc: "Modifikasi seating valve, flanged ends, body machining untuk integrasi pipa khusus.",
-                image: "/images/ball-valves.jpg"
+                image: "/images/products/ball-valve.png"
               },
               {
                 icon: "construction",
                 title: "Precision Engineering",
                 desc: "Pembuatan drawing CAD, verifikasi toleransi fitting, dan support tim teknik proyek.",
-                image: "/images/quality-control.jpg"
+                image: "/images/quality-control.png"
               }
             ].map((cap) => (
               <div key={cap.title} className="group bg-slate-50 border border-slate-200 hover:border-accent/40 rounded overflow-hidden shadow-sm flex flex-col h-full transition-all duration-300">
@@ -242,7 +241,7 @@ export default function Home() {
               <div className="aspect-[16/10] relative rounded overflow-hidden">
                 <Image
                   alt="Quality Control"
-                  src="/images/quality-control.jpg"
+                  src="/images/quality-control.png"
                   fill
                   className="object-cover"
                 />
@@ -316,7 +315,7 @@ export default function Home() {
               </div>
               <a
                 className="inline-flex items-center gap-2 bg-accent text-white hover:bg-accent/90 px-8 py-4 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-accent/20"
-                href={waLink}
+                href={siteConfig.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -335,7 +334,7 @@ export default function Home() {
                 </div>
                 <Image
                   alt="Map placeholder"
-                  src="/images/cnc-machining.jpg"
+                  src="/images/cnc-machining.png"
                   fill
                   className="object-cover opacity-30 grayscale"
                 />

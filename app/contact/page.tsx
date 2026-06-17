@@ -13,8 +13,6 @@ export const metadata: Metadata = {
 export const dynamic = "force-static";
 
 export default function ContactPage() {
-  const waLink = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}`;
-
   return (
     <>
       <section className="bg-white py-16 border-b border-slate-200">
@@ -72,7 +70,7 @@ export default function ContactPage() {
               </div>
               <div className="mt-8">
                 <a
-                  href={waLink}
+                  href={siteConfig.whatsappLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full py-3.5 bg-primary text-white border border-slate-800 hover:bg-slate-900 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow"
@@ -83,22 +81,30 @@ export default function ContactPage() {
               </div>
             </div>
 
-            <div className="bg-white rounded border border-slate-200 p-2 h-[360px] overflow-hidden shadow-sm relative">
-              <div className="w-full h-full bg-slate-50 relative rounded overflow-hidden">
-                <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-slate-950/40 backdrop-blur-[2px]">
-                  <span className="material-symbols-outlined text-5xl text-accent mb-4">map</span>
-                  <h4 className="font-technical-data text-sm font-bold text-white mb-2 uppercase tracking-wider">Lokasi Kantor Kami</h4>
-                  <p className="text-slate-300 text-xs font-body-md mb-6 max-w-xs leading-relaxed">Map placeholder. Kami berlokasi strategis untuk memudahkan pengiriman.</p>
-                  <Link className="bg-primary hover:bg-accent text-white px-5 py-2 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors duration-200" href="/">
-                    Kembali ke Beranda
-                  </Link>
-                </div>
-                <Image
-                  alt="Map placeholder"
-                  src="/images/industrial-warehouse.jpg"
-                  fill
-                  className="object-cover opacity-20 grayscale"
+            <div className="bg-white rounded border border-slate-200 p-2 h-[380px] overflow-hidden shadow-sm relative flex flex-col">
+              <div className="flex-1 w-full relative bg-slate-50 rounded overflow-hidden">
+                <iframe
+                  title="Lokasi PT Peroni Karya Sentra"
+                  src="https://maps.google.com/maps?q=Ngoro%20Industri%20Persada%20Blok.K-5A,%20Mojokerto&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen={false}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="w-full h-full"
                 />
+              </div>
+              <div className="mt-2">
+                <a
+                  href="https://maps.app.goo.gl/DauCtmjJUmcsKhhQ7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 w-full py-2.5 bg-primary text-white border border-slate-800 hover:bg-slate-900 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow"
+                >
+                  <span className="material-symbols-outlined text-sm">directions</span>
+                  Buka di Google Maps
+                </a>
               </div>
             </div>
           </aside>

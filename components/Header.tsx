@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { HeaderSearch } from "@/components/HeaderSearch";
 import { MobileNav } from "@/components/MobileNav";
 
@@ -20,12 +21,14 @@ export function Header() {
     <header className="sticky top-0 w-full z-50 glass-header border-b border-border-subtle shadow-sm">
       <div className="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20 relative">
         <Link href="/" className="flex items-center gap-3 group">
-          <span className="material-symbols-outlined text-accent text-3xl group-hover:rotate-12 transition-transform duration-300">
-            precision_manufacturing
-          </span>
-          <span className="font-headline-sm text-headline-sm font-extrabold tracking-tight text-primary">
-            PERONIKS
-          </span>
+          <Image
+            src="/images/logo-dark.png"
+            alt="PERONIKS Logo"
+            width={140}
+            height={40}
+            className="h-10 w-auto object-contain mix-blend-multiply"
+            priority
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

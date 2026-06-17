@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 
 export function Footer() {
@@ -8,13 +9,18 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <span className="material-symbols-outlined text-accent text-3xl">precision_manufacturing</span>
-              <span className="font-technical-data text-base font-extrabold tracking-widest text-white">
-                PERONIKS
-              </span>
+              <div className="bg-white p-1 rounded shadow-sm inline-flex items-center justify-center">
+                <Image
+                  src="/images/logo-light.png"
+                  alt="PERONIKS Logo"
+                  width={140}
+                  height={40}
+                  className="h-10 w-auto object-contain"
+                />
+              </div>
             </div>
             <p className="font-body-md text-sm text-slate-400 leading-relaxed">
-              Indonesian Industrial Excellence. Mitra manufaktur dan supplier terpercaya untuk solusi flange, fittings, dan valves stainless steel presisi berkualitas tinggi sejak 2009.
+              Indonesian Industrial Excellence. Mitra manufaktur dan supplier terpercaya untuk solusi flange, fittings, dan valves stainless steel presisi berkualitas tinggi sejak 1997.
             </p>
           </div>
 
@@ -107,7 +113,7 @@ export function Footer() {
             <a className="text-slate-400 hover:text-accent transition-colors duration-200" href={`mailto:${siteConfig.email}`} title="Email Us">
               <span className="material-symbols-outlined text-xl">mail</span>
             </a>
-            <a className="text-slate-400 hover:text-accent transition-colors duration-200" href={`https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}`} target="_blank" rel="noopener noreferrer" title="WhatsApp Chat">
+            <a className="text-slate-400 hover:text-accent transition-colors duration-200" href={siteConfig.whatsappLink} target="_blank" rel="noopener noreferrer" title="WhatsApp Chat">
               <span className="material-symbols-outlined text-xl font-bold">chat</span>
             </a>
           </div>

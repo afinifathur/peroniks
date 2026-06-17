@@ -3,8 +3,6 @@
 import { siteConfig } from "@/lib/config";
 
 export function ContactForm() {
-  const waLink = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}`;
-
   return (
     <div className="bg-white border border-slate-200 rounded p-8 shadow-sm">
       <div className="mb-6">
@@ -70,7 +68,7 @@ export function ContactForm() {
         </div>
         <div className="flex flex-col sm:flex-row gap-4 pt-2">
           <a
-            href={waLink}
+            href={siteConfig.whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center gap-2 bg-primary text-white border border-slate-800 hover:bg-slate-900 px-6 py-3 rounded-sm font-technical-data text-xs font-bold uppercase tracking-wider transition-colors shadow cursor-pointer"

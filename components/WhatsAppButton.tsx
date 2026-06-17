@@ -1,12 +1,10 @@
 import { siteConfig } from "@/lib/config";
 
 export function WhatsAppButton() {
-  const waLink = `https://wa.me/${siteConfig.whatsappNumber.replace(/\D/g, "")}`;
-
   return (
     <a
       className="fixed bottom-8 right-8 z-[100] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-95 group"
-      href={waLink}
+      href={siteConfig.whatsappLink}
       aria-label="Chat WhatsApp"
       target="_blank"
       rel="noopener noreferrer"

@@ -70,7 +70,7 @@ export default function AboutPage() {
           <aside className="lg:col-span-5 space-y-8">
             <div className="rounded border border-slate-200 bg-white overflow-hidden shadow-sm p-3">
               <div className="aspect-[4/3] relative rounded overflow-hidden mb-4 border border-slate-100">
-                <Image src="/images/industrial-warehouse.jpg" alt="Factory" fill className="object-cover" />
+                <Image src="/images/factory-hero.png" alt="Factory" fill className="object-cover" />
               </div>
               <div className="p-4">
                 <div className="font-technical-data text-[10px] text-accent font-bold uppercase tracking-wider mb-2">

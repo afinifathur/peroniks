@@ -1,11 +1,12 @@
 export const siteConfig = {
   name: "PERONIKS",
-  legalName: "PERONIKS Industrial",
+  legalName: "PT Peroni Karya Sentra",
   description:
     "Produsen dan supplier flange, pipe fittings, ball valve, dan custom CNC machining stainless steel untuk kebutuhan industri di Indonesia.",
   baseUrl: "https://peroniks.com",
-  whatsappNumber: "+628123456789",
-  address: "Kawasan Industri Jababeka, Bekasi, Jawa Barat, Indonesia",
+  whatsappNumber: "6281333768638",
+  address: "Ngoro Industri Persada Blok.K-5A, Ngoro-Mojokerto 61385, East Java, Indonesia",
+  whatsappLink: "https://api.whatsapp.com/send/?phone=6281333768638&text&type=phone_number&app_absent=0",
   email: "sales@peroniks.com",
   phone: "+62 21-XXXX-XXXX",
 } as const;

@@ -1,5 +1,18 @@
 import type { Product, ProductCategory } from "@/lib/types";
 
+export const categoryImages: Record<ProductCategory, string> = {
+  "Blind Flange": "/images/products/blind-flange.png",
+  "Weld Neck Flange": "/images/products/weld-neck-flange.png",
+  "Slip On Flange": "/images/products/slip-on-flange.png",
+  "Socket Weld Flange": "/images/products/socket-weld-flange.png",
+  "Threaded Flange": "/images/products/threaded-flange.png",
+  "Lap Joint Flange": "/images/products/lap-joint-flange.png",
+  "Elbow": "/images/products/elbow.png",
+  "Tee": "/images/products/tee.png",
+  "Reducer": "/images/products/reducer.png",
+  "Ball Valve": "/images/products/ball-valve.png",
+};
+
 function makeProduct(i: number, category: ProductCategory, name: string, opts: Partial<Product> = {}): Product {
   const slug = (opts.slug ?? name)
     .toLowerCase()
@@ -16,7 +29,7 @@ function makeProduct(i: number, category: ProductCategory, name: string, opts: P
       "Komponen industrial presisi untuk sistem perpipaan. Cocok untuk aplikasi oil & gas, food & beverage, water treatment, dan manufaktur umum.",
     material: "SS304 / SS316",
     standard: "ANSI B16.5 / JIS 10K / ASME",
-    image: "/images/stainless-steel-flange.jpg",
+    image: categoryImages[category],
     seoTitle: `${name} Stainless Steel | PERONIKS`,
     seoDescription:
       "Spesifikasi lengkap, material SS304/SS316, dan dukungan engineering untuk kebutuhan proyek. Ready stock dan bisa custom machining.",
@@ -126,19 +139,16 @@ export const products: Product[] = [
   makeProduct(19, "Elbow", "Elbow 90° Long Radius SCH40", {
     standard: "ASME B16.9",
     material: "SS304",
-    image: "/images/pipe-fittings.jpg",
     description: "Elbow 90° LR untuk perubahan arah flow. SCH40 untuk aplikasi umum dengan pressure moderat.",
   }),
   makeProduct(20, "Elbow", "Elbow 45° Long Radius SCH40", {
     standard: "ASME B16.9",
     material: "SS304",
-    image: "/images/pipe-fittings.jpg",
     description: "Elbow 45° LR untuk mengurangi head loss dibanding 90°. Cocok untuk piping layout yang rapih.",
   }),
   makeProduct(21, "Elbow", "Elbow 90° Long Radius SCH80", {
     standard: "ASME B16.9",
     material: "SS316",
-    image: "/images/pipe-fittings.jpg",
     description: "Elbow 90° LR SCH80 untuk tekanan lebih tinggi dan service yang membutuhkan ketebalan ekstra.",
   }),
 
@@ -146,19 +156,16 @@ export const products: Product[] = [
   makeProduct(22, "Tee", "Equal Tee ASME B16.9 SCH40", {
     standard: "ASME B16.9",
     material: "SS304",
-    image: "/images/pipe-fittings.jpg",
     description: "Equal tee untuk branching dengan diameter sama. Umum untuk utilitas dan process line.",
   }),
   makeProduct(23, "Tee", "Reducing Tee ASME B16.9 SCH40", {
     standard: "ASME B16.9",
     material: "SS304",
-    image: "/images/pipe-fittings.jpg",
     description: "Reducing tee untuk branching ke diameter lebih kecil. Memudahkan distribusi ke equipment.",
   }),
   makeProduct(24, "Tee", "Equal Tee ASME B16.9 SCH80", {
     standard: "ASME B16.9",
     material: "SS316",
-    image: "/images/pipe-fittings.jpg",
     description: "Equal tee SCH80 untuk tekanan lebih tinggi dan service korosif. Pilihan aman untuk critical line.",
   }),
 
@@ -166,39 +173,33 @@ export const products: Product[] = [
   makeProduct(25, "Reducer", "Concentric Reducer ASME B16.9 SCH40", {
     standard: "ASME B16.9",
     material: "SS304",
-    image: "/images/pipe-fittings.jpg",
     description: "Concentric reducer untuk perubahan diameter yang simetris. Cocok untuk vertical line atau pump suction tertentu.",
   }),
   makeProduct(26, "Reducer", "Eccentric Reducer ASME B16.9 SCH40", {
     standard: "ASME B16.9",
     material: "SS304",
-    image: "/images/pipe-fittings.jpg",
     description: "Eccentric reducer untuk menjaga bottom of pipe level. Umum pada pump suction untuk mencegah air pocket.",
   }),
   makeProduct(27, "Reducer", "Concentric Reducer ASME B16.9 SCH80", {
     standard: "ASME B16.9",
     material: "SS316",
-    image: "/images/pipe-fittings.jpg",
-    description: "Concentric reducer SCH80 untuk aplikasi tekanan lebih tinggi dan ketahanan korosi yang lebih baik.",
+    description: "Concentric reducer SCH80 untuk aplikasi tekanan lebih tinggi and ketahanan korosi yang lebih baik.",
   }),
 
   // Ball Valve
   makeProduct(28, "Ball Valve", "Stainless Ball Valve 2-Piece 1000 WOG", {
     standard: "API 608 / ISO 17292",
     material: "SS316",
-    image: "/images/ball-valves.jpg",
     description: "Ball valve 2-piece untuk on/off service. Rating 1000 WOG, seat PTFE, pilihan end connection NPT/BSP.",
   }),
   makeProduct(29, "Ball Valve", "Stainless Ball Valve 3-Piece 1000 WOG", {
     standard: "API 608 / ISO 17292",
     material: "SS316",
-    image: "/images/ball-valves.jpg",
     description: "Ball valve 3-piece untuk kemudahan maintenance (body removable). Cocok untuk plant yang membutuhkan serviceability.",
   }),
   makeProduct(30, "Ball Valve", "Stainless Ball Valve Flanged End Class 150", {
     standard: "ASME B16.5 Class 150",
     material: "SS316",
-    image: "/images/ball-valves.jpg",
     description: "Ball valve flanged end untuk integrasi ke sistem flange ANSI. Cocok untuk piping process dan utility.",
   }),
 ];
