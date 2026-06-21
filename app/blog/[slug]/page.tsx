@@ -100,7 +100,7 @@ export default async function BlogDetailPage({
             </span>
           </div>
 
-          <h1 className="font-technical-data text-3xl md:text-5xl text-primary font-extrabold mb-4 leading-[1.15]">
+          <h1 className="font-display text-3xl md:text-5xl text-primary font-extrabold mb-4 leading-[1.15]">
             {article.title}
           </h1>
           <p className="font-body-lg text-slate-500 mb-6 text-base leading-relaxed max-w-4xl">{article.excerpt}</p>
@@ -122,7 +122,7 @@ export default async function BlogDetailPage({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-8">
             <div
-              className="prose prose-slate max-w-none prose-headings:font-technical-data prose-headings:font-bold prose-headings:text-primary prose-p:text-slate-600 prose-p:font-body-md prose-p:text-sm prose-p:leading-relaxed prose-strong:text-slate-800 prose-a:text-primary hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-slate-500 prose-table:text-xs font-body-md"
+              className="prose prose-slate max-w-none prose-headings:font-display prose-headings:font-bold prose-headings:text-primary prose-p:text-slate-600 prose-p:font-body-md prose-p:text-sm prose-p:leading-relaxed prose-strong:text-slate-800 prose-a:text-primary hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:text-slate-500 prose-table:text-xs font-body-md"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
@@ -130,7 +130,7 @@ export default async function BlogDetailPage({
           <aside className="lg:col-span-4 space-y-8">
             <div className="bg-white border border-slate-200 rounded overflow-hidden shadow-sm">
               <div className="bg-slate-50 p-4 border-b border-slate-200">
-                <h4 className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+                <h4 className="font-display text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-base">info</span>
                   Ringkasan Teknis
                 </h4>

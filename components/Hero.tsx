@@ -23,7 +23,7 @@ export function Hero() {
             <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
             PT Peroni Karya Sentra — ISO 9001:2015 Certified
           </span>
-          <h1 className="font-display-lg text-4xl md:text-6xl text-white font-extrabold tracking-tight leading-[1.15] mb-6">
+          <h1 className="font-display text-4xl md:text-6xl text-white font-extrabold tracking-tight leading-[1.15] mb-6">
             Presisi &amp; Material <br className="hidden md:inline" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-300">
               Traceability Sejak 1997

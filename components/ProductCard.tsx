@@ -45,7 +45,7 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="font-technical-data text-sm font-bold text-primary mb-2 line-clamp-1 group-hover:text-primary transition-colors duration-200">
+        <h3 className="font-display text-sm font-bold text-primary mb-2 line-clamp-1 group-hover:text-primary transition-colors duration-200">
           {product.name}
         </h3>
         <p className="font-body-md text-xs text-slate-500 mb-4 line-clamp-2 leading-relaxed">

@@ -34,7 +34,7 @@ export function ArticleCard({ article }: { article: Article }) {
           </span>
         </div>
         
-        <h3 className="font-technical-data text-base font-bold text-primary mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-200 leading-snug">
+        <h3 className="font-display text-base font-bold text-primary mb-3 line-clamp-2 group-hover:text-primary transition-colors duration-200 leading-snug">
           {article.title}
         </h3>
         

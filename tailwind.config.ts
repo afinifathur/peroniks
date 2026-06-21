@@ -78,6 +78,9 @@ export default {
         base: "8px",
       },
       fontFamily: {
+        display: ["var(--font-manrope)", "ui-sans-serif", "system-ui", "sans-serif"],
+        body: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+        technical: ["var(--font-jetbrains-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
         "technical-data": ["var(--font-jetbrains-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
         "body-lg": ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
         "label-caps": ["var(--font-jetbrains-mono)", "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],

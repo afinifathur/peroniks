@@ -45,7 +45,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-12 border-b border-slate-100 pb-8">
             <div>
               <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Featured Catalog</span>
-              <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Katalog Produk Utama</h2>
+              <h2 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Katalog Produk Utama</h2>
               <p className="font-body-md text-xs text-slate-500 leading-relaxed">
                 Komponen presisi dengan spesifikasi teknis lengkap, siap memenuhi standard industri.
               </p>
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-16">
             <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Why Partner With Us</span>
-            <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Mengapa Memilih PERONIKS?</h2>
+            <h2 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Mengapa Memilih PERONIKS?</h2>
             <div className="w-12 h-1 bg-primary mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -89,7 +89,7 @@ export default function Home() {
                 <div className="bg-primary/5 p-3 rounded-full text-primary mb-4 border border-primary/10 flex items-center justify-center">
                   <span className="material-symbols-outlined text-3xl">{x.icon}</span>
                 </div>
-                <h4 className="font-technical-data text-sm font-bold text-primary mb-2">{x.title}</h4>
+                <h4 className="font-display text-sm font-bold text-primary mb-2">{x.title}</h4>
                 <p className="font-body-md text-xs text-slate-500 leading-relaxed">{x.desc}</p>
               </div>
             ))}
@@ -102,7 +102,7 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-16">
             <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Production Capabilities</span>
-            <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Kapasitas Manufaktur Kami</h2>
+            <h2 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Kapasitas Manufaktur Kami</h2>
             <div className="w-12 h-1 bg-primary mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -145,7 +145,7 @@ export default function Home() {
                 <div className="p-5 flex-1 flex flex-col">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="material-symbols-outlined text-primary text-lg">{cap.icon}</span>
-                    <h4 className="font-technical-data text-sm font-bold text-primary">{cap.title}</h4>
+                    <h4 className="font-display text-sm font-bold text-primary">{cap.title}</h4>
                   </div>
                   <p className="font-body-md text-xs text-slate-500 leading-relaxed mb-4">
                     {cap.desc}
@@ -162,7 +162,7 @@ export default function Home() {
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-16">
             <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Industries We Serve</span>
-            <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Industri Yang Kami Layani</h2>
+            <h2 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-4">Industri Yang Kami Layani</h2>
             <div className="w-12 h-1 bg-primary mx-auto" />
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -178,7 +178,7 @@ export default function Home() {
                 <div className="bg-primary/5 p-3 rounded text-primary mb-4 flex items-center justify-center">
                   <span className="material-symbols-outlined text-3xl">{ind.icon}</span>
                 </div>
-                <h4 className="font-technical-data text-xs font-bold text-primary mb-1">{ind.label}</h4>
+                <h4 className="font-display text-xs font-bold text-primary mb-1">{ind.label}</h4>
                 <p className="text-[10px] text-slate-400 font-body-md leading-snug">{ind.desc}</p>
               </div>
             ))}
@@ -192,7 +192,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
-                <h2 className="font-technical-data text-lg font-bold text-primary flex items-center gap-3">
+                <h2 className="font-display text-lg font-bold text-primary flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary">book</span> Knowledge Center
                 </h2>
                 <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-primary" href="/blog">
@@ -208,7 +208,7 @@ export default function Home() {
 
             <div>
               <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
-                <h2 className="font-technical-data text-lg font-bold text-primary flex items-center gap-3">
+                <h2 className="font-display text-lg font-bold text-primary flex items-center gap-3">
                   <span className="material-symbols-outlined text-primary">download</span> Engineering Tools
                 </h2>
                 <Link className="font-technical-data text-xs font-bold uppercase tracking-wider text-primary" href="/downloads">
@@ -255,7 +255,7 @@ export default function Home() {
             </div>
             <div>
               <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">QA/QC Control</span>
-              <h2 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-6">Manufaktur &amp; Pengawasan Kualitas</h2>
+              <h2 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-6">Manufaktur &amp; Pengawasan Kualitas</h2>
               <p className="font-body-lg text-sm text-slate-500 mb-8 leading-relaxed">
                 Setiap komponen melewati serangkaian pengujian dan verifikasi laboratorium. Kami berkomitmen membantu tim engineering memastikan integrasi sempurna pada sistem perpipaan dengan kontrol toleransi dimensional dan audit material yang ketat.
               </p>
@@ -267,7 +267,7 @@ export default function Home() {
                   },
                   {
                     title: "Hydrostatic Pressure Test",
-                    desc: "Pengecekan integritas struktural dan uji kebocoran (leakage test) untuk produk valve dan fitting khusus sebelum masuk tahap finishing.",
+                    desc: "Pengecekan integrital struktural dan uji kebocoran (leakage test) untuk produk valve dan fitting khusus sebelum masuk tahap finishing.",
                   },
                 ].map((x) => (
                   <div key={x.title} className="flex gap-4">
@@ -275,7 +275,7 @@ export default function Home() {
                       <span className="material-symbols-outlined text-lg">done_all</span>
                     </div>
                     <div>
-                      <h4 className="font-technical-data text-sm font-bold text-primary mb-1">{x.title}</h4>
+                      <h4 className="font-display text-sm font-bold text-primary mb-1">{x.title}</h4>
                       <p className="font-body-md text-xs text-slate-500 leading-relaxed">{x.desc}</p>
                     </div>
                   </div>
@@ -293,7 +293,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Get a Quote Today</span>
-              <h2 className="font-technical-data text-3xl md:text-5xl text-slate-900 font-extrabold mt-2 mb-6 leading-[1.15]">
+              <h2 className="font-display text-3xl md:text-5xl text-slate-900 font-extrabold mt-2 mb-6 leading-[1.15]">
                 Butuh Penawaran Harga Hari Ini?
               </h2>
               <p className="font-body-lg text-sm text-slate-600 mb-8 leading-relaxed max-w-xl">
@@ -326,7 +326,7 @@ export default function Home() {
               <div className="w-full h-full bg-slate-100 relative rounded overflow-hidden">
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center z-10 bg-white/90 backdrop-blur-[1px]">
                   <span className="material-symbols-outlined text-5xl text-primary mb-4">map</span>
-                  <h4 className="font-technical-data text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider">Lokasi Kantor &amp; Workshop</h4>
+                  <h4 className="font-display text-sm font-bold text-slate-900 mb-2 uppercase tracking-wider">Lokasi Kantor &amp; Workshop</h4>
                   <p className="text-slate-600 text-xs font-body-md mb-6 max-w-sm leading-relaxed">Terletak strategis di pusat manufaktur dan distribusi industri Indonesia.</p>
                   <Link className="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded font-technical-data text-xs uppercase tracking-wider font-bold transition-colors duration-200" href="/contact">
                     Buka Detail Kontak &amp; Peta

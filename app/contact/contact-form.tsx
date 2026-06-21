@@ -6,7 +6,7 @@ export function ContactForm() {
   return (
     <div className="bg-white border border-slate-200 rounded p-8 shadow-sm">
       <div className="mb-6">
-        <h2 className="font-technical-data text-lg font-bold text-primary uppercase tracking-wider">Formulir Permintaan Penawaran (RFQ)</h2>
+        <h2 className="font-display text-lg font-bold text-primary uppercase tracking-wider">Formulir Permintaan Penawaran (RFQ)</h2>
         <p className="text-slate-500 font-body-md text-xs mt-1">Lengkapi spesifikasi perpipaan Anda untuk mempercepat estimasi harga resmi.</p>
       </div>
       <form

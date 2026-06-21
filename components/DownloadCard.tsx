@@ -48,7 +48,7 @@ export function DownloadCard({ item }: { item: Download }) {
               PDF | {size}
             </span>
           </div>
-          <h4 className="font-technical-data text-sm font-bold text-primary leading-snug">
+          <h4 className="font-display text-sm font-bold text-primary leading-snug">
             {item.title}
           </h4>
           <p className="font-body-md text-xs text-slate-500 max-w-xl leading-relaxed">

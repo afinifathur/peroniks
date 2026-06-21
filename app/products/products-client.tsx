@@ -74,7 +74,7 @@ export function ProductsClient({
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
           <div>
             <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Product Catalog</span>
-            <h1 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Spesifikasi Flange, Fitting &amp; Valve</h1>
+            <h1 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Spesifikasi Flange, Fitting &amp; Valve</h1>
             <p className="text-slate-500 font-body-md text-xs leading-relaxed max-w-xl">
               Komponen perpipaan stainless steel berkualitas tinggi. Siap melayani pemesanan skala proyek dan custom CNC machining dengan toleransi presisi.
             </p>

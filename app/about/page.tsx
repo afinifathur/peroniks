@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="bg-white py-16 border-b border-slate-200">
         <div className="max-w-container-max mx-auto px-gutter">
           <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Company Profile</span>
-          <h1 className="font-technical-data text-3xl md:text-5xl text-primary font-extrabold mt-2 mb-4">Tentang PERONIKS</h1>
+          <h1 className="font-display text-3xl md:text-5xl text-primary font-extrabold mt-2 mb-4">Tentang PERONIKS</h1>
           <p className="font-body-lg text-slate-500 max-w-3xl leading-relaxed text-sm md:text-base">
             PERONIKS adalah produsen dan supplier komponen perpipaan industrial presisi tinggi di Indonesia. Kami memproduksi stainless steel flanges, pipe fittings, ball valves, serta menyediakan layanan custom CNC machining untuk kebutuhan engineering.
           </p>
@@ -27,14 +27,14 @@ export default function AboutPage() {
           <div className="lg:col-span-7">
             <div className="space-y-8">
               <section className="bg-white border border-slate-200 rounded p-8 shadow-sm">
-                <h2 className="font-technical-data text-lg font-bold text-primary mb-4 uppercase tracking-wider">Fokus pada Spesifikasi &amp; Traceability</h2>
+                <h2 className="font-display text-lg font-bold text-primary mb-4 uppercase tracking-wider">Fokus pada Spesifikasi &amp; Traceability</h2>
                 <p className="text-slate-500 font-body-md text-xs leading-relaxed">
                   Pada instalasi piping industri, presisi dan ketahanan adalah segalanya. PERONIKS berkomitmen menghadirkan produk dengan toleransi dimensional yang ketat, sertifikasi material lengkap (MTC 3.1), serta pengujian kualitas komprehensif. Kami mendukung tim procurement dan engineering Anda menghindari mismatch standar dan kegagalan komponen di lapangan.
                 </p>
               </section>
 
               <section className="bg-slate-50 border border-slate-200 rounded p-8">
-                <h3 className="font-technical-data text-base font-bold text-primary mb-6 uppercase tracking-wider flex items-center gap-2">
+                <h3 className="font-display text-base font-bold text-primary mb-6 uppercase tracking-wider flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-xl">verified</span> Nilai Utama Kami
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -45,7 +45,7 @@ export default function AboutPage() {
                     { title: "Reliable Distribution", desc: "Logistik terpercaya untuk pengiriman tepat waktu ke seluruh Indonesia." },
                   ].map((x) => (
                     <div key={x.title} className="bg-white border border-slate-200 rounded p-5">
-                      <div className="font-technical-data text-xs font-bold text-primary mb-2 uppercase tracking-wider">{x.title}</div>
+                      <div className="font-display text-xs font-bold text-primary mb-2 uppercase tracking-wider">{x.title}</div>
                       <p className="text-slate-500 text-xs font-body-md leading-relaxed">{x.desc}</p>
                     </div>
                   ))}
@@ -53,7 +53,7 @@ export default function AboutPage() {
               </section>
 
               <section className="bg-white border border-slate-200 rounded p-8 shadow-sm">
-                <h3 className="font-technical-data text-base font-bold text-primary mb-3 uppercase tracking-wider">Butuh Penawaran Skala Proyek?</h3>
+                <h3 className="font-display text-base font-bold text-primary mb-3 uppercase tracking-wider">Butuh Penawaran Skala Proyek?</h3>
                 <p className="text-slate-500 font-body-md text-xs leading-relaxed mb-6">
                   Kirimkan detail spesifikasi teknis kebutuhan proyek Anda (DN/NPS, standard flange, pressure class, material type, dan quantity) untuk mendapatkan penawaran PDF resmi dari tim sales kami.
                 </p>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 <span className="material-symbols-outlined text-[160px]">precision_manufacturing</span>
               </div>
               <span className="text-slate-300 font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Quick Navigation</span>
-              <h4 className="font-technical-data text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Katalog &amp; Data Teknik</h4>
+              <h4 className="font-display text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Katalog &amp; Data Teknik</h4>
               <p className="font-body-md text-xs text-slate-300 opacity-90 mb-8 relative z-10 leading-relaxed">
                 Pelajari standar dimensi, rating pressure, dan chemical composition material stainless steel di halaman katalog dan download tools kami.
               </p>

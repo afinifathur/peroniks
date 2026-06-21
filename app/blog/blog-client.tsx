@@ -101,7 +101,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
 
             <div>
               <div className="flex items-center justify-between mb-8 border-b border-slate-200 pb-4">
-                <h3 className="font-technical-data text-base font-bold text-primary flex items-center gap-2">
+                <h3 className="font-display text-base font-bold text-primary flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary">library_books</span>
                   Engineering Library
                 </h3>
@@ -120,7 +120,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                     <div className="flex items-start gap-3">
                       <span className="material-symbols-outlined text-slate-400 mt-0.5 text-lg group-hover:text-secondary transition-colors duration-200">description</span>
                       <div>
-                        <h4 className="font-technical-data text-xs font-bold text-primary group-hover:text-secondary transition-colors duration-200 leading-snug">
+                        <h4 className="font-display text-xs font-bold text-primary group-hover:text-secondary transition-colors duration-200 leading-snug">
                           {a.title}
                         </h4>
                         <p className="text-[10px] text-slate-400 font-technical-data uppercase tracking-wider font-semibold mt-1">
@@ -149,7 +149,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
           <aside className="lg:col-span-4 space-y-12">
             <div className="bg-white border border-slate-200 rounded overflow-hidden shadow-sm">
               <div className="bg-slate-50 p-4 border-b border-slate-200">
-                <h4 className="font-technical-data text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
+                <h4 className="font-display text-xs font-bold text-primary uppercase tracking-wider flex items-center gap-2">
                   <span className="material-symbols-outlined text-primary text-base">trending_up</span>
                   Spesifikasi Terpopuler
                 </h4>
@@ -165,7 +165,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                         rel="noopener noreferrer"
                       >
                         <div className="flex flex-col pr-4">
-                          <span className="font-technical-data text-[11px] text-primary font-bold leading-tight group-hover:text-secondary transition-colors duration-200">{d.title}</span>
+                          <span className="font-display text-[11px] text-primary font-bold leading-tight group-hover:text-secondary transition-colors duration-200">{d.title}</span>
                           <span className="text-[10px] text-slate-400 font-body-md mt-0.5 leading-snug line-clamp-1">{d.description}</span>
                         </div>
                         <span className="material-symbols-outlined text-slate-400 group-hover:text-secondary transition-colors text-lg shrink-0">
@@ -183,9 +183,9 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                 <span className="material-symbols-outlined text-[160px]">engineering</span>
               </div>
               <span className="text-slate-300 font-technical-data text-[9px] uppercase tracking-widest font-bold mb-2 block">Engineering Support</span>
-              <h4 className="font-technical-data text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Butuh Bantuan Teknis?</h4>
+              <h4 className="font-display text-base font-extrabold mb-3 relative z-10 uppercase tracking-wider leading-snug">Butuh Bantuan Teknis?</h4>
               <p className="font-body-md text-xs text-slate-300 opacity-90 mb-8 relative z-10 leading-relaxed">
-                Tim sales engineer kami siap membantu memilih spesifikasi material, sertifikasi, dan standardisasi flange/piping yang tepat untuk proyek Anda.
+                Tim sales engineer kami siap membantu memilih spesifikasi material, sertifikasi, and standardisasi flange/piping yang tepat untuk proyek Anda.
               </p>
               <Link
                 className="inline-flex items-center justify-center gap-2 w-full py-3 bg-secondary text-white font-technical-data text-xs font-bold uppercase tracking-wider rounded hover:bg-slate-900 transition-colors shadow-md shadow-secondary/25 relative z-10"
@@ -207,7 +207,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                     className="object-cover grayscale opacity-60"
                   />
                 </div>
-                <h6 className="font-technical-data text-xs font-bold text-primary leading-snug">Material Selection Guide for Hydrogen &amp; Corrosive Service</h6>
+                <h6 className="font-display text-xs font-bold text-primary leading-snug">Material Selection Guide for Hydrogen &amp; Corrosive Service</h6>
                 <p className="text-[11px] text-slate-500 leading-relaxed font-body-md">
                   Dokumen teknis komparatif pemilihan grade stainless steel AISI 304, 316, 316L untuk mengurangi risiko korosi klorida.
                 </p>

@@ -54,3 +54,30 @@ export type Download = {
   url: string;
 };
 
+export interface CatalogCategory {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+}
+
+export interface CatalogStandard {
+  code: string;
+  name: string;
+  pdfUrl?: string | null;
+  standardType?: string;
+  material?: string;
+}
+
+export interface ProductFamily {
+  slug: string;
+  categorySlug: string;
+  name: string;
+  description: string;
+  image: string;
+  materials: string;
+  applications: string[];
+  standards: CatalogStandard[];
+}
+
+

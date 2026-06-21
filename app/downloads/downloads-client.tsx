@@ -53,7 +53,7 @@ export function DownloadsClient({ downloads }: { downloads: Download[] }) {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12 border-b border-slate-200 pb-6">
           <div>
             <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Engineering Resource Center</span>
-            <h1 className="font-technical-data text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Pusat Unduhan Dokumen Teknik</h1>
+            <h1 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Pusat Unduhan Dokumen Teknik</h1>
             <p className="text-slate-500 font-body-md text-xs leading-relaxed max-w-xl">
               Referensi spesifikasi, standar material, toleransi dimensi flange dan fitting stainless steel untuk memvalidasi detail proyek Anda.
             </p>
