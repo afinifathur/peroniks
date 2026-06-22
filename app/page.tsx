@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Hero } from "@/components/Hero";
-import { ProductCard } from "@/components/ProductCard";
 import { DownloadCard } from "@/components/DownloadCard";
 import { ArticleCard } from "@/components/ArticleCard";
-import { products } from "@/data/products";
 import { downloads } from "@/data/downloads";
 import { articles } from "@/data/articles";
 import { siteConfig } from "@/lib/config";
+import { categories } from "@/data/catalog/categories";
+import { productFamilies } from "@/data/catalog/families";
+import { standardsByFamily } from "@/data/catalog/standards";
 
 export default function Home() {
-  const topProducts = products.slice(0, 4);
   const latestArticles = articles.slice(0, 2);
   const topDownloads = downloads.slice(0, 3);
 
@@ -42,29 +42,89 @@ export default function Home() {
       {/* Product Catalog Preview */}
       <section className="py-20 bg-white">
         <div className="max-w-container-max mx-auto px-gutter">
-          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6 mb-12 border-b border-slate-100 pb-8">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-12 border-b border-slate-100 pb-8">
             <div>
-              <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">Featured Catalog</span>
-              <h2 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Katalog Produk Utama</h2>
-              <p className="font-body-md text-xs text-slate-500 leading-relaxed">
-                Komponen presisi dengan spesifikasi teknis lengkap, siap memenuhi standard industri.
-              </p>
+              <span className="text-slate-500 font-technical-data text-xs uppercase tracking-widest font-bold">PRODUCT CATEGORIES</span>
+              <h2 className="font-display text-2xl md:text-4xl text-primary font-extrabold mt-2 mb-2">Jelajahi Kategori Produk</h2>
+              <div className="font-technical-data text-[10px] sm:text-xs text-slate-600 bg-slate-100 py-1.5 px-3.5 rounded border border-slate-200 mt-2 inline-flex items-center gap-1.5 font-bold tracking-wider uppercase">
+                <span className="w-1.5 h-1.5 bg-[#005AA9] rounded-full"></span>
+                <span>61 Product Families</span>
+                <span className="text-slate-300">•</span>
+                <span>176 Engineering Datasheets</span>
+                <span className="text-slate-300">•</span>
+                <span>Material Traceability</span>
+              </div>
             </div>
             <Link
-              className="font-technical-data text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-2 group hover:underline decoration-primary underline-offset-4"
               href="/products"
+              className="inline-flex items-center gap-2 bg-[#005AA9] hover:bg-[#004480] text-white px-6 py-3.5 rounded font-technical-data text-xs font-bold uppercase tracking-wider transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg shadow-[#005AA9]/20"
             >
-              Lihat Katalog Lengkap{" "}
-              <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">
-                arrow_forward
-              </span>
+              LIHAT SEMUA 61 PRODUCT FAMILIES
+              <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {topProducts.map((p) => (
-              <ProductCard key={p.id} product={p} />
-            ))}
+            {categories.map((category) => {
+              // Calculate stats dynamically
+              const families = productFamilies.filter(f => f.categorySlug === category.slug);
+              const familyCount = families.length;
+              let datasheetCount = 0;
+              families.forEach(family => {
+                const standards = standardsByFamily[family.slug] || [];
+                datasheetCount += standards.filter(s => s.pdfUrl).length;
+              });
+
+              return (
+                <div
+                  key={category.slug}
+                  className="group bg-slate-50 border border-slate-200 hover:border-[#005AA9]/40 rounded overflow-hidden shadow-sm hover:shadow-md flex flex-col justify-between h-full transition-all duration-300"
+                >
+                  <div className="aspect-[16/10] w-full overflow-hidden relative bg-slate-100 border-b border-slate-100">
+                    {category.image ? (
+                      <Image
+                        src={category.image}
+                        alt={category.name}
+                        fill
+                        className="object-cover group-hover:scale-102 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-slate-200">
+                        <span className="material-symbols-outlined text-4xl text-slate-400">precision_manufacturing</span>
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
+                    <div className="absolute bottom-3 left-3 flex flex-wrap gap-1.5">
+                      <span className="bg-[#0F2942]/90 backdrop-blur-sm text-white px-2 py-0.5 rounded-sm text-[9px] font-technical-data font-bold uppercase tracking-wider">
+                        {familyCount} {familyCount === 1 ? "Family" : "Families"}
+                      </span>
+                      <span className="bg-[#005AA9]/90 backdrop-blur-sm text-white px-2 py-0.5 rounded-sm text-[9px] font-technical-data font-bold uppercase tracking-wider">
+                        {datasheetCount} {datasheetCount === 1 ? "Datasheet" : "Datasheets"}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="p-5 flex-1 flex flex-col justify-between">
+                    <div className="mb-5">
+                      <h3 className="font-display text-sm font-bold text-primary mb-2 group-hover:text-[#005AA9] transition-colors duration-200">
+                        {category.name}
+                      </h3>
+                      <p className="font-body-md text-xs text-slate-500 leading-relaxed line-clamp-3">
+                        {category.description}
+                      </p>
+                    </div>
+                    <Link
+                      href={`/products/${category.slug}`}
+                      className="inline-flex items-center justify-between w-full bg-white border border-slate-200 group-hover:border-[#005AA9]/30 text-primary group-hover:text-white group-hover:bg-[#005AA9] px-4 py-2.5 rounded font-technical-data text-[10px] font-bold uppercase tracking-wider transition-all duration-200"
+                    >
+                      <span>Jelajahi Produk</span>
+                      <span className="material-symbols-outlined text-xs group-hover:translate-x-0.5 transition-transform">
+                        arrow_forward
+                      </span>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -109,43 +109,244 @@ export const standardsByFamily: Record<string, CatalogStandard[]> = {
   ],
 
   // Aluminium Flanges
-  "plat-flange": [
-    { code: "jis-10k-plat", name: "JIS 10K Plat", pdfUrl: null },
-    { code: "ansi-150-plat", name: "ANSI 150 Plat", pdfUrl: null },
+  "plat-flange-al": [
+    { code: "din-2642-pn10-iso", name: "DIN 2642 PN 10 ISO SIZE", pdfUrl: "https://peroniks.com/file/pdf/64591-1.%20DIN%202642%20PN%2010%20ISO%20SIZE.pdf" },
+    { code: "din-2642-pn10-metric", name: "DIN 2642 PN 10 METRIC SIZE", pdfUrl: "https://peroniks.com/file/pdf/818d4-2.%20DIN%202642%20PN%2010%20METRIC%20SIZE.pdf" }
+  ],
+  "blind-flange-al": [
+    { code: "din-2527-pn10-blind", name: "DIN 2527 PN 10 BLIND", pdfUrl: "https://peroniks.com/file/pdf/12a67-DIN%202642%20PN%2010%20BLIND.pdf" }
   ],
 
-  // Valves
+  // --- Screw Fittings (27 Families) ---
+  "reduced-socket-nipple": [
+    { code: "reduced-socket-nipple-npt", name: "Reduced Socket Nipple NPT", pdfUrl: "https://peroniks.com/file/pdf/ac259-REDUCED%20SOCKET%20NIPPLE.pdf" },
+    { code: "reduced-socket-nipple-bsp", name: "Reduced Socket Nipple BSP", pdfUrl: "https://peroniks.com/file/pdf/ac259-REDUCED%20SOCKET%20NIPPLE.pdf" }
+  ],
+  "elbow-45-f-f": [
+    { code: "elbow-45-ff-npt", name: "Elbow 45 F.F. NPT", pdfUrl: "https://peroniks.com/file/pdf/36372-ELBOW%2045%20F.F.pdf" },
+    { code: "elbow-45-ff-bsp", name: "Elbow 45 F.F. BSP", pdfUrl: "https://peroniks.com/file/pdf/36372-ELBOW%2045%20F.F.pdf" }
+  ],
+  "elbow-45-m-f": [
+    { code: "elbow-45-mf-npt", name: "Elbow 45 M.F. NPT", pdfUrl: "https://peroniks.com/file/pdf/cd2e8-ELBOW%2045%20M.F.pdf" },
+    { code: "elbow-45-mf-bsp", name: "Elbow 45 M.F. BSP", pdfUrl: "https://peroniks.com/file/pdf/cd2e8-ELBOW%2045%20M.F.pdf" }
+  ],
+  "elbow-90-f-f": [
+    { code: "elbow-90-ff-std-npt", name: "Elbow 90 F.F. (Standard) NPT", pdfUrl: "https://peroniks.com/file/pdf/d770c-ELBOW%2090%20F.F.pdf" },
+    { code: "elbow-90-ff-std-bsp", name: "Elbow 90 F.F. (Standard) BSP", pdfUrl: "https://peroniks.com/file/pdf/d770c-ELBOW%2090%20F.F.pdf" },
+    { code: "elbow-90-ff-eco-npt", name: "Elbow 90 F.F. (Economic) NPT", pdfUrl: "https://peroniks.com/file/pdf/7ad9d-ELBOW%2090%20FF%20ECO.pdf" },
+    { code: "elbow-90-ff-eco-bsp", name: "Elbow 90 F.F. (Economic) BSP", pdfUrl: "https://peroniks.com/file/pdf/7ad9d-ELBOW%2090%20FF%20ECO.pdf" }
+  ],
+  "elbow-90-m-f": [
+    { code: "elbow-90-mf-npt", name: "Elbow 90 M.F. NPT", pdfUrl: "https://peroniks.com/file/pdf/2f835-ELBOW%2090%20M.F.pdf" },
+    { code: "elbow-90-mf-bsp", name: "Elbow 90 M.F. BSP", pdfUrl: "https://peroniks.com/file/pdf/2f835-ELBOW%2090%20M.F.pdf" }
+  ],
+  "equal-tee": [
+    { code: "equal-tee-std-npt", name: "Equal Tee (Standard) NPT", pdfUrl: "https://peroniks.com/file/pdf/5c01e-EQUAL%20TEE.pdf" },
+    { code: "equal-tee-std-bsp", name: "Equal Tee (Standard) BSP", pdfUrl: "https://peroniks.com/file/pdf/5c01e-EQUAL%20TEE.pdf" },
+    { code: "equal-tee-eco-npt", name: "Equal Tee (Economic) NPT", pdfUrl: "https://peroniks.com/file/pdf/55f7d-EQUAL%20TEE%20ECO.pdf" },
+    { code: "equal-tee-eco-bsp", name: "Equal Tee (Economic) BSP", pdfUrl: "https://peroniks.com/file/pdf/55f7d-EQUAL%20TEE%20ECO.pdf" }
+  ],
+  "reduced-tee": [
+    { code: "reduced-tee-npt", name: "Reduced Tee NPT", pdfUrl: "https://peroniks.com/file/pdf/d5120-REDUCED%20TEE.pdf" },
+    { code: "reduced-tee-bsp", name: "Reduced Tee BSP", pdfUrl: "https://peroniks.com/file/pdf/d5120-REDUCED%20TEE.pdf" }
+  ],
+  "hex-nipple": [
+    { code: "hex-nipple-std-npt", name: "Hex Nipple (Standard) NPT", pdfUrl: "https://peroniks.com/file/pdf/5d399-HEX%20NIPPLE.pdf" },
+    { code: "hex-nipple-std-bsp", name: "Hex Nipple (Standard) BSP", pdfUrl: "https://peroniks.com/file/pdf/5d399-HEX%20NIPPLE.pdf" },
+    { code: "hex-nipple-eco-npt", name: "Hex Nipple (Economic) NPT", pdfUrl: "https://peroniks.com/file/pdf/01299-HEX%20NIPPLE%20ECO.pdf" },
+    { code: "hex-nipple-eco-bsp", name: "Hex Nipple (Economic) BSP", pdfUrl: "https://peroniks.com/file/pdf/01299-HEX%20NIPPLE%20ECO.pdf" }
+  ],
+  "hex-hose-nipple": [
+    { code: "hex-hose-nipple-npt", name: "Hex Hose Nipple NPT", pdfUrl: "https://peroniks.com/file/pdf/b2efb-HEX%20HOSE%20NIPPLE.pdf" },
+    { code: "hex-hose-nipple-bsp", name: "Hex Hose Nipple BSP", pdfUrl: "https://peroniks.com/file/pdf/b2efb-HEX%20HOSE%20NIPPLE.pdf" }
+  ],
+  "hex-bushing": [
+    { code: "hex-bushing-npt", name: "Hex Bushing NPT", pdfUrl: "https://peroniks.com/file/pdf/557d1-HEX%20BUSHING.pdf" },
+    { code: "hex-bushing-bsp", name: "Hex Bushing BSP", pdfUrl: "https://peroniks.com/file/pdf/557d1-HEX%20BUSHING.pdf" }
+  ],
+  "reduced-hex-nipple": [
+    { code: "reduced-hex-nipple-npt", name: "Reduced Hex Nipple NPT", pdfUrl: "https://peroniks.com/file/pdf/c8032-REDUCED%20HEX%20NIPPLE.pdf" },
+    { code: "reduced-hex-nipple-bsp", name: "Reduced Hex Nipple BSP", pdfUrl: "https://peroniks.com/file/pdf/c8032-REDUCED%20HEX%20NIPPLE.pdf" }
+  ],
+  "coupling": [
+    { code: "coupling-npt", name: "Coupling NPT", pdfUrl: "https://peroniks.com/file/pdf/05e71-COUPLING%20DIN%202986.pdf" },
+    { code: "coupling-bsp", name: "Coupling BSP", pdfUrl: "https://peroniks.com/file/pdf/05e71-COUPLING%20DIN%202986.pdf" }
+  ],
+  "banded-coupling": [
+    { code: "banded-coupling-npt", name: "Banded Coupling NPT", pdfUrl: "https://peroniks.com/file/pdf/59510-BANDED%20COUPLING.pdf" },
+    { code: "banded-coupling-bsp", name: "Banded Coupling BSP", pdfUrl: "https://peroniks.com/file/pdf/59510-BANDED%20COUPLING.pdf" }
+  ],
+  "half-coupling": [
+    { code: "half-coupling-npt", name: "Half Coupling NPT", pdfUrl: "https://peroniks.com/file/pdf/46221-HALF%20COUPLING.pdf" },
+    { code: "half-coupling-bsp", name: "Half Coupling BSP", pdfUrl: "https://peroniks.com/file/pdf/46221-HALF%20COUPLING.pdf" }
+  ],
+  "reduced-coupling": [
+    { code: "reduced-coupling-npt", name: "Reduced Coupling NPT", pdfUrl: "https://peroniks.com/file/pdf/5be90-REDUCED%20COUPLING.pdf" },
+    { code: "reduced-coupling-bsp", name: "Reduced Coupling BSP", pdfUrl: "https://peroniks.com/file/pdf/5be90-REDUCED%20COUPLING.pdf" }
+  ],
+  "round-cap": [
+    { code: "round-cap-npt", name: "Round Cap NPT", pdfUrl: "https://peroniks.com/file/pdf/82642-ROUND%20CAP.pdf" },
+    { code: "round-cap-bsp", name: "Round Cap BSP", pdfUrl: "https://peroniks.com/file/pdf/82642-ROUND%20CAP.pdf" }
+  ],
+  "square-plug": [
+    { code: "square-plug-npt", name: "Square Plug NPT", pdfUrl: "https://peroniks.com/file/pdf/8b7e7-SQUARE%20PLUG.pdf" },
+    { code: "square-plug-bsp", name: "Square Plug BSP", pdfUrl: "https://peroniks.com/file/pdf/8b7e7-SQUARE%20PLUG.pdf" }
+  ],
+  "cross": [
+    { code: "cross-npt", name: "Cross NPT", pdfUrl: "https://peroniks.com/file/pdf/e848f-CROSS.pdf" },
+    { code: "cross-bsp", name: "Cross BSP", pdfUrl: "https://peroniks.com/file/pdf/e848f-CROSS.pdf" }
+  ],
+  "hex-cap": [
+    { code: "hex-cap-npt", name: "Hex Cap NPT", pdfUrl: "https://peroniks.com/file/pdf/47b82-HEX%20CAP.pdf" },
+    { code: "hex-cap-bsp", name: "Hex Cap BSP", pdfUrl: "https://peroniks.com/file/pdf/47b82-HEX%20CAP.pdf" }
+  ],
+  "hex-nut": [
+    { code: "hex-nut-npt", name: "Hex Nut NPT", pdfUrl: "https://peroniks.com/file/pdf/926c0-HEX%20NUT.pdf" },
+    { code: "hex-nut-bsp", name: "Hex Nut BSP", pdfUrl: "https://peroniks.com/file/pdf/926c0-HEX%20NUT.pdf" }
+  ],
+  "hex-plug": [
+    { code: "hex-plug-npt", name: "Hex Plug NPT", pdfUrl: "https://peroniks.com/file/pdf/758e1-HEX%20PLUG.pdf" },
+    { code: "hex-plug-bsp", name: "Hex Plug BSP", pdfUrl: "https://peroniks.com/file/pdf/758e1-HEX%20PLUG.pdf" }
+  ],
+  "union-f-f-conical-seat": [
+    { code: "union-ff-conical-std-npt", name: "Union F.F. Conical Seat (Standard) NPT", pdfUrl: "https://peroniks.com/file/pdf/53d75-UNION%20F.F%20CONICAL.pdf" },
+    { code: "union-ff-conical-std-bsp", name: "Union F.F. Conical Seat (Standard) BSP", pdfUrl: "https://peroniks.com/file/pdf/53d75-UNION%20F.F%20CONICAL.pdf" },
+    { code: "union-ff-conical-eco-npt", name: "Union F.F. Conical Seat (Economic) NPT", pdfUrl: "https://peroniks.com/file/pdf/a9d46-UNION%20CONICAL%20FF%20ECO.pdf" },
+    { code: "union-ff-conical-eco-bsp", name: "Union F.F. Conical Seat (Economic) BSP", pdfUrl: "https://peroniks.com/file/pdf/a9d46-UNION%20CONICAL%20FF%20ECO.pdf" }
+  ],
+  "union-m-f-conical-seat": [
+    { code: "union-mf-conical-std-npt", name: "Union M.F. Conical Seat (Standard) NPT", pdfUrl: "https://peroniks.com/file/pdf/6a155-UNION%20M.F%20CONICAL.pdf" },
+    { code: "union-mf-conical-std-bsp", name: "Union M.F. Conical Seat (Standard) BSP", pdfUrl: "https://peroniks.com/file/pdf/6a155-UNION%20M.F%20CONICAL.pdf" },
+    { code: "union-mf-conical-eco-npt", name: "Union M.F. Conical Seat (Economic) NPT", pdfUrl: "https://peroniks.com/file/pdf/abc71-UNION%20CONICAL%20MF%20ECO.pdf" },
+    { code: "union-mf-conical-eco-bsp", name: "Union M.F. Conical Seat (Economic) BSP", pdfUrl: "https://peroniks.com/file/pdf/abc71-UNION%20CONICAL%20MF%20ECO.pdf" }
+  ],
+  "union-f-f-teflon": [
+    { code: "union-ff-teflon-std-npt", name: "Union F.F. Teflon (Standard) NPT", pdfUrl: "https://peroniks.com/file/pdf/f6f69-UNION%20F.F%20TEFLON.pdf" },
+    { code: "union-ff-teflon-std-bsp", name: "Union F.F. Teflon (Standard) BSP", pdfUrl: "https://peroniks.com/file/pdf/f6f69-UNION%20F.F%20TEFLON.pdf" },
+    { code: "union-ff-teflon-eco-npt", name: "Union F.F. Teflon (Economic) NPT", pdfUrl: "https://peroniks.com/file/pdf/57bb7-UNION%20TEFLON%20ECO.pdf" },
+    { code: "union-ff-teflon-eco-bsp", name: "Union F.F. Teflon (Economic) BSP", pdfUrl: "https://peroniks.com/file/pdf/57bb7-UNION%20TEFLON%20ECO.pdf" }
+  ],
+  "union-elbow-90-f-f": [
+    { code: "union-elbow-90-ff-npt", name: "Union Elbow 90 F.F. NPT", pdfUrl: "https://peroniks.com/file/pdf/afaca-UNION%20ELBOW%20FF.pdf" },
+    { code: "union-elbow-90-ff-bsp", name: "Union Elbow 90 F.F. BSP", pdfUrl: "https://peroniks.com/file/pdf/afaca-UNION%20ELBOW%20FF.pdf" }
+  ],
+  "union-elbow-90-m-f": [
+    { code: "union-elbow-90-mf-npt", name: "Union Elbow 90 M.F. NPT", pdfUrl: "https://peroniks.com/file/pdf/27a2d-UNION%20ELBOW%20MF.pdf" },
+    { code: "union-elbow-90-mf-bsp", name: "Union Elbow 90 M.F. BSP", pdfUrl: "https://peroniks.com/file/pdf/27a2d-UNION%20ELBOW%20MF.pdf" }
+  ],
+  "tank-skin-fitting": [
+    { code: "tank-skin-fitting-npt", name: "Tank Skin Fitting NPT", pdfUrl: "https://peroniks.com/file/pdf/a7c0b-TANK%20SKIN%20FITTING%20(NIPPLE%20TANK).pdf" },
+    { code: "tank-skin-fitting-bsp", name: "Tank Skin Fitting BSP", pdfUrl: "https://peroniks.com/file/pdf/a7c0b-TANK%20SKIN%20FITTING%20(NIPPLE%20TANK).pdf" }
+  ],
+
+  // --- Butt Weld Fittings (8 Families) ---
+  "butt-weld-elbow-45-long-radius": [
+    { code: "butt-weld-elbow-45-lr-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/9e268-BUTT%20WELD%20ELBOW%2045%20LR.pdf" },
+    { code: "butt-weld-elbow-45-lr-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/9e268-BUTT%20WELD%20ELBOW%2045%20LR.pdf" },
+    { code: "butt-weld-elbow-45-lr-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/9e268-BUTT%20WELD%20ELBOW%2045%20LR.pdf" }
+  ],
+  "butt-weld-elbow-90-short-radius": [
+    { code: "butt-weld-elbow-90-sr-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/1f9d5-BUTT%20WELD%20ELBOW%2090%20SR.pdf" },
+    { code: "butt-weld-elbow-90-sr-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/1f9d5-BUTT%20WELD%20ELBOW%2090%20SR.pdf" },
+    { code: "butt-weld-elbow-90-sr-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/1f9d5-BUTT%20WELD%20ELBOW%2090%20SR.pdf" }
+  ],
+  "butt-weld-elbow-90-long-radius": [
+    { code: "butt-weld-elbow-90-lr-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/33c27-BUTT%20WELD%20ELBOW%2090%20LR.pdf" },
+    { code: "butt-weld-elbow-90-lr-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/33c27-BUTT%20WELD%20ELBOW%2090%20LR.pdf" },
+    { code: "butt-weld-elbow-90-lr-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/33c27-BUTT%20WELD%20ELBOW%2090%20LR.pdf" }
+  ],
+  "butt-weld-concentric-reducer": [
+    { code: "butt-weld-concentric-reducer-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/c9dd5-BUTT%20WELD%20CONCENTRIC%20REDUCER.pdf" },
+    { code: "butt-weld-concentric-reducer-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/c9dd5-BUTT%20WELD%20CONCENTRIC%20REDUCER.pdf" },
+    { code: "butt-weld-concentric-reducer-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/c9dd5-BUTT%20WELD%20CONCENTRIC%20REDUCER.pdf" }
+  ],
+  "butt-weld-tee": [
+    { code: "butt-weld-tee-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/4f047-BUTT%20WELD%20EQUAL%20TEE.pdf" },
+    { code: "butt-weld-tee-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/4f047-BUTT%20WELD%20EQUAL%20TEE.pdf" },
+    { code: "butt-weld-tee-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/4f047-BUTT%20WELD%20EQUAL%20TEE.pdf" }
+  ],
+  "butt-weld-reduced-tee": [
+    { code: "butt-weld-reduced-tee-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/3a131-BUTT%20WELD%20REDUCED%20TEE.pdf" },
+    { code: "butt-weld-reduced-tee-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/3a131-BUTT%20WELD%20REDUCED%20TEE.pdf" },
+    { code: "butt-weld-reduced-tee-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/3a131-BUTT%20WELD%20REDUCED%20TEE.pdf" }
+  ],
+  "butt-weld-end-cap": [
+    { code: "butt-weld-end-cap-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/7dae8-BUTT%20WELD%20END%20CAP.pdf" },
+    { code: "butt-weld-end-cap-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/7dae8-BUTT%20WELD%20END%20CAP.pdf" },
+    { code: "butt-weld-end-cap-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/7dae8-BUTT%20WELD%20END%20CAP.pdf" }
+  ],
+  "butt-weld-stub-end": [
+    { code: "butt-weld-stub-end-sch10", name: "ASME B16.9 SCH10", pdfUrl: "https://peroniks.com/file/pdf/0f4d1-BUTT%20WELD%20STUB%20END.pdf" },
+    { code: "butt-weld-stub-end-sch40", name: "ASME B16.9 SCH40", pdfUrl: "https://peroniks.com/file/pdf/0f4d1-BUTT%20WELD%20STUB%20END.pdf" },
+    { code: "butt-weld-stub-end-sch80", name: "ASME B16.9 SCH80", pdfUrl: "https://peroniks.com/file/pdf/0f4d1-BUTT%20WELD%20STUB%20END.pdf" }
+  ],
+
+  // --- Socket Weld Fittings (7 Families) ---
+  "socket-welded-elbow-90": [
+    { code: "socket-welded-elbow-90-cl3000", name: "ASME B16.11 Class 3000", pdfUrl: "https://peroniks.com/file/pdf/4e412-2.%20SOCKET%20WELD%20ELBOW%2090.pdf" },
+    { code: "socket-welded-elbow-90-cl6000", name: "ASME B16.11 Class 6000", pdfUrl: "https://peroniks.com/file/pdf/4e412-2.%20SOCKET%20WELD%20ELBOW%2090.pdf" }
+  ],
+  "socket-welded-union-seat": [
+    { code: "socket-welded-union-seat-std-cl3000", name: "Socket Welded Union Seat (Standard) Class 3000", pdfUrl: "https://peroniks.com/file/pdf/f54c5-8.%20SW%20UNION%20CON%20SEAT%20STD.pdf" },
+    { code: "socket-welded-union-seat-std-cl6000", name: "Socket Welded Union Seat (Standard) Class 6000", pdfUrl: "https://peroniks.com/file/pdf/f54c5-8.%20SW%20UNION%20CON%20SEAT%20STD.pdf" },
+    { code: "socket-welded-union-seat-eco-cl3000", name: "Socket Welded Union Seat (Economic) Class 3000", pdfUrl: "https://peroniks.com/file/pdf/ad8c5-9.%20SW%20UNION%20CON%20SEAT%20ECO.pdf" },
+    { code: "socket-welded-union-seat-eco-cl6000", name: "Socket Welded Union Seat (Economic) Class 6000", pdfUrl: "https://peroniks.com/file/pdf/ad8c5-9.%20SW%20UNION%20CON%20SEAT%20ECO.pdf" },
+    { code: "socket-weld-union-epdm-gasket-cl3000", name: "Socket Weld Union EPDM Gasket Class 3000", pdfUrl: "https://peroniks.com/file/pdf/c8034-7.%20SOCKET%20WELD%20UNION%20EPDM%20GASKET.pdf" },
+    { code: "socket-weld-union-epdm-gasket-cl6000", name: "Socket Weld Union EPDM Gasket Class 6000", pdfUrl: "https://peroniks.com/file/pdf/c8034-7.%20SOCKET%20WELD%20UNION%20EPDM%20GASKET.pdf" }
+  ],
+  "socket-welded-elbow-45": [
+    { code: "socket-welded-elbow-45-cl3000", name: "ASME B16.11 Class 3000", pdfUrl: "https://peroniks.com/file/pdf/9b068-3.%20SOCKET%20WELD%20ELBOW%2045.pdf" },
+    { code: "socket-welded-elbow-45-cl6000", name: "ASME B16.11 Class 6000", pdfUrl: "https://peroniks.com/file/pdf/9b068-3.%20SOCKET%20WELD%20ELBOW%2045.pdf" }
+  ],
+  "socket-welded-tee": [
+    { code: "socket-welded-tee-cl3000", name: "ASME B16.11 Class 3000", pdfUrl: "https://peroniks.com/file/pdf/fcb3b-SOCKET%20WELD%20TEE.pdf" },
+    { code: "socket-welded-tee-cl6000", name: "ASME B16.11 Class 6000", pdfUrl: "https://peroniks.com/file/pdf/fcb3b-SOCKET%20WELD%20TEE.pdf" }
+  ],
+  "socket-welded-coupling": [
+    { code: "socket-welded-coupling-cl3000", name: "ASME B16.11 Class 3000", pdfUrl: "https://peroniks.com/file/pdf/472c4-SOCKET%20WELD%20COUPLING.pdf" },
+    { code: "socket-welded-coupling-cl6000", name: "ASME B16.11 Class 6000", pdfUrl: "https://peroniks.com/file/pdf/472c4-SOCKET%20WELD%20COUPLING.pdf" }
+  ],
+  "socket-welded-round-cap": [
+    { code: "socket-welded-round-cap-cl3000", name: "ASME B16.11 Class 3000", pdfUrl: "https://peroniks.com/file/pdf/af3e1-SOCKET%20WELD%20ROUND%20CAP.pdf" },
+    { code: "socket-welded-round-cap-cl6000", name: "ASME B16.11 Class 6000", pdfUrl: "https://peroniks.com/file/pdf/af3e1-SOCKET%20WELD%20ROUND%20CAP.pdf" }
+  ],
+  "socket-welded-reduced-coupling": [
+    { code: "socket-welded-reduced-coupling-cl3000", name: "ASME B16.11 Class 3000", pdfUrl: "https://peroniks.com/file/pdf/8290a-SOCKET%20WELD%20REDUCED%20COUPLING.pdf" },
+    { code: "socket-welded-reduced-coupling-cl6000", name: "ASME B16.11 Class 6000", pdfUrl: "https://peroniks.com/file/pdf/8290a-SOCKET%20WELD%20REDUCED%20COUPLING.pdf" }
+  ],
+
+  // --- Valves (5 Families) ---
   "1pc-ball-valve-1000-wog": [
-    { code: "ball-valve-1pc-npt", name: "1PC Ball Valve NPT Threaded", pdfUrl: null },
-    { code: "ball-valve-1pc-bsp", name: "1PC Ball Valve BSP Threaded", pdfUrl: null },
+    { code: "ball-valve-1pc-npt", name: "1PC Ball Valve NPT Threaded", pdfUrl: "https://peroniks.com/file/pdf/67c8f-1-PC%20SCREWED%20END%20BALL%20VALVE%201000%20WOG%20%5B22.02.2024%5D.pdf" },
+    { code: "ball-valve-1pc-bsp", name: "1PC Ball Valve BSP Threaded", pdfUrl: "https://peroniks.com/file/pdf/67c8f-1-PC%20SCREWED%20END%20BALL%20VALVE%201000%20WOG%20%5B22.02.2024%5D.pdf" }
   ],
   "2pc-ball-valve-1000-wog": [
-    { code: "ball-valve-2pc-npt", name: "2PC Ball Valve NPT Threaded", pdfUrl: null },
-    { code: "ball-valve-2pc-bsp", name: "2PC Ball Valve BSP Threaded", pdfUrl: null },
+    { code: "ball-valve-2pc-npt", name: "2PC Ball Valve NPT Threaded", pdfUrl: "https://peroniks.com/file/pdf/f2cc2-2-PC%20SCREWED%20END%20BALL%20VALVE%201000%20WOG.pdf" },
+    { code: "ball-valve-2pc-bsp", name: "2PC Ball Valve BSP Threaded", pdfUrl: "https://peroniks.com/file/pdf/f2cc2-2-PC%20SCREWED%20END%20BALL%20VALVE%201000%20WOG.pdf" }
   ],
   "3pc-ball-valve-1000-wog": [
-    { code: "ball-valve-3pc-npt", name: "3PC Ball Valve NPT Threaded", pdfUrl: null },
-    { code: "ball-valve-3pc-bsp", name: "3PC Ball Valve BSP Threaded", pdfUrl: null },
+    { code: "ball-valve-3pc-npt", name: "3PC Ball Valve NPT Threaded", pdfUrl: "https://peroniks.com/file/pdf/6796b-3-PC%20SCREWED%20END%20BALL%20VALVE%201000%20WOG.pdf" },
+    { code: "ball-valve-3pc-bsp", name: "3PC Ball Valve BSP Threaded", pdfUrl: "https://peroniks.com/file/pdf/6796b-3-PC%20SCREWED%20END%20BALL%20VALVE%201000%20WOG.pdf" }
   ],
   "3pc-iso5211-direct-mounting-pad-ball-valve": [
-    { code: "ball-valve-3pc-iso5211-npt", name: "3PC ISO5211 Ball Valve NPT", pdfUrl: null },
-    { code: "ball-valve-3pc-iso5211-sw", name: "3PC ISO5211 Ball Valve SW", pdfUrl: null },
+    { code: "ball-valve-3pc-iso5211-npt", name: "3PC ISO5211 Ball Valve NPT", pdfUrl: "https://peroniks.com/file/pdf/6de8d-3-PC%20ISO5211%20DIRECT%20MOUNTING%20PAD%20BALL%20VALVE.pdf" },
+    { code: "ball-valve-3pc-iso5211-sw", name: "3PC ISO5211 Ball Valve SW", pdfUrl: "https://peroniks.com/file/pdf/6de8d-3-PC%20ISO5211%20DIRECT%20MOUNTING%20PAD%20BALL%20VALVE.pdf" }
   ],
   "y-strainer-screwed-end": [
-    { code: "y-strainer-npt", name: "Y-Strainer NPT Threaded", pdfUrl: null },
-    { code: "y-strainer-bsp", name: "Y-Strainer BSP Threaded", pdfUrl: null },
+    { code: "y-strainer-npt", name: "Y-Strainer NPT Threaded", pdfUrl: "https://peroniks.com/file/pdf/be340-Y-STRAINER%20SCREWED%20END.pdf" },
+    { code: "y-strainer-bsp", name: "Y-Strainer BSP Threaded", pdfUrl: "https://peroniks.com/file/pdf/be340-Y-STRAINER%20SCREWED%20END.pdf" }
   ],
 
   // Carbon Steel Flanges
   "plate-flange-cs": [
-    { code: "jis-10k-ff-cs", name: "JIS 10K FF Carbon Steel", pdfUrl: null },
-    { code: "ansi-150-ff-cs", name: "ANSI 150 FF Carbon Steel", pdfUrl: null },
+    { code: "jis-10k-ff-cs", name: "JIS 10K FF Carbon Steel", pdfUrl: "https://peroniks.com/file/pdf/419da-CS%20Q235%20FORGING%20FLANGE%20JIS%2010K.pdf" },
+    { code: "ansi-150-ff-cs", name: "ANSI 150 FF Carbon Steel", pdfUrl: null }
   ],
 
   // Flange Ball Valves
   "flange-ball-valve": [
-    { code: "flange-ball-valve-class150", name: "Flange Ball Valve ANSI Class 150", pdfUrl: null },
-    { code: "flange-ball-valve-jis10k", name: "Flange Ball Valve JIS 10K", pdfUrl: null },
-  ],
+    { code: "flange-ball-valve-class150", name: "Flange Ball Valve ANSI Class 150", pdfUrl: "https://peroniks.com/file/pdf/98032-2-PC%20FLANGED%20END%20BALL%20VALVE%20ANSI%20150LBS.pdf" },
+    { code: "flange-ball-valve-jis10k", name: "Flange Ball Valve JIS 10K", pdfUrl: "https://peroniks.com/file/pdf/1cd84-2-PC%20FLANGED%20END%20BALL%20VALVE%20JIS%2010K.pdf" },
+    { code: "flange-ball-valve-din-pn16", name: "Flange Ball Valve DIN PN16", pdfUrl: "https://peroniks.com/file/pdf/d1142-2-PC%20FLANGED%20END%20BALL%20VALVE%20DIN%20PN16.pdf" }
+  ]
 };
-
