@@ -209,7 +209,7 @@ export function BlogClient({ articles, downloads }: { articles: Article[]; downl
                 </div>
                 <h6 className="font-display text-xs font-bold text-primary leading-snug">Material Selection Guide for Hydrogen &amp; Corrosive Service</h6>
                 <p className="text-[11px] text-slate-500 leading-relaxed font-body-md">
-                  Dokumen teknis komparatif pemilihan grade stainless steel AISI 304, 316, 316L untuk mengurangi risiko korosi klorida.
+                  Dokumen teknis komparatif pemilihan grade stainless steel AISI 304, 316, untuk mengurangi risiko korosi klorida.
                 </p>
                 <Link className="text-primary hover:underline font-technical-data text-xs font-bold uppercase tracking-wider flex items-center gap-1.5" href="/downloads">
                   Unduh Whitepaper <span className="material-symbols-outlined text-sm">open_in_new</span>

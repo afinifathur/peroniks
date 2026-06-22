@@ -61,7 +61,7 @@ const rawFamilies = [
     name: "Plate Flange",
     description: "Flange datar plate type untuk koneksi perpipaan non-kritis dan tekanan rendah.",
     image: "/images/products/blind-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Water Treatment", "Pulp & Paper", "Food & Beverage", "HVAC Utility Line"],
   },
   {
@@ -70,7 +70,7 @@ const rawFamilies = [
     name: "Blind Flange",
     description: "Flange buta untuk menutup ujung pipa, line isolasi, hydrotesting, dan inspeksi berkala.",
     image: "/images/products/blind-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Oil & Gas Piping", "Chemical Plant", "Water Treatment", "High Pressure Vessels"],
   },
   {
@@ -79,7 +79,7 @@ const rawFamilies = [
     name: "Raised Face Flange",
     description: "Flange raised face (RF) dengan permukaan gasket lebih tinggi untuk daya cengkram maksimal.",
     image: "/images/products/blind-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Industrial Steam Line", "Petrochemical Processing", "Process Utility line"],
   },
   {
@@ -88,7 +88,7 @@ const rawFamilies = [
     name: "Raised Face Blind Flange",
     description: "Flange buta dengan permukaan raised face untuk kerapatan gasket yang lebih baik.",
     image: "/images/products/blind-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["High Pressure End Lines", "Chemical Reactor Ports", "Hydrotest Terminals"],
   },
   {
@@ -97,7 +97,7 @@ const rawFamilies = [
     name: "Loose Flange",
     description: "Flange longgar untuk memudahkan perataan bolt hole alignment saat instalasi pipa.",
     image: "/images/products/lap-joint-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Corrosive Pipe Systems", "Low Pressure Distribution", "Frequent Maintenance Piping"],
   },
   {
@@ -106,7 +106,7 @@ const rawFamilies = [
     name: "Slip On Flange",
     description: "Flange slip on (SORF) yang dipasang dengan menyelipkan pipa ke lubang internal flange.",
     image: "/images/products/slip-on-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Process Piping", "Cooling Water Systems", "Low-Medium Pressure Utilites"],
   },
   {
@@ -115,7 +115,7 @@ const rawFamilies = [
     name: "Threaded Flange",
     description: "Flange berulir untuk menghubungkan pipa tanpa perlu pengelasan (welding).",
     image: "/images/products/threaded-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Explosive Gas Systems", "Cold-Work Areas", "Small Bore Piping Connections"],
   },
   {
@@ -124,7 +124,7 @@ const rawFamilies = [
     name: "Welding Neck Flange",
     description: "Flange weld neck dengan tapered hub untuk transfer beban tekanan maksimal.",
     image: "/images/products/weld-neck-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Extreme Temperature Lines", "Steam Pipelines", "Oil & Gas Offshore Platforms"],
   },
   {
@@ -133,7 +133,7 @@ const rawFamilies = [
     name: "Socket Welding Flange",
     description: "Flange socket weld untuk sambungan pipa berdiameter kecil (small bore).",
     image: "/images/products/socket-weld-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Hydraulic Lines", "Chemical Dosing Systems", "High Integrity Small Piping"],
   },
   {
@@ -142,7 +142,7 @@ const rawFamilies = [
     name: "Square Flange",
     description: "Flange kotak untuk sambungan hidrolik tekanan tinggi atau kebutuhan khusus.",
     image: "/images/products/blind-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Hydraulic Machinery", "Heavy Equipments", "Special Fluid Systems"],
   },
 
@@ -418,7 +418,7 @@ const rawFamilies = [
     name: "Butt Weld Elbow 45 Long Radius",
     description: "Elbow butt weld 45 derajat Long Radius untuk perubahan arah fluida dengan gesekan rendah.",
     image: "/images/products/elbow.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["High Flow Piping", "Chemical Process Lines", "Petrochemical Refineries"],
   },
   {
@@ -427,7 +427,7 @@ const rawFamilies = [
     name: "Butt Weld Elbow 90 Short Radius",
     description: "Elbow butt weld 90 derajat Short Radius untuk belokan tajam pada area terbatas.",
     image: "/images/products/elbow.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Skid Mounted Piping", "Shipbuilding Utilities", "Compact Industrial Piping"],
   },
   {
@@ -436,7 +436,7 @@ const rawFamilies = [
     name: "Butt Weld Elbow 90 Long Radius",
     description: "Elbow butt weld 90 derajat Long Radius standard untuk perubahan arah aliran fluida.",
     image: "/images/products/elbow.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Main Process Piping", "Cross-Country Lines", "Water & Steam Utilities"],
   },
   {
@@ -445,7 +445,7 @@ const rawFamilies = [
     name: "Butt Weld Concentric Reducer",
     description: "Reducer butt weld konsentris untuk mengubah ukuran pipa dengan poros simetris.",
     image: "/images/products/reducer.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Vertical Fluid Lines", "Discharge Pump Lines", "Gas Supply Systems"],
   },
   {
@@ -454,7 +454,7 @@ const rawFamilies = [
     name: "Butt Weld Tee",
     description: "Equal tee butt weld untuk pencabangan pipa dengan ukuran diameter sama.",
     image: "/images/products/tee.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Piping Branch Manifolds", "Distribution Pipelines", "Industrial Plants"],
   },
   {
@@ -463,7 +463,7 @@ const rawFamilies = [
     name: "Butt Weld Reduced Tee",
     description: "Reducing tee butt weld untuk pencabangan pipa dengan ukuran outlet lebih kecil.",
     image: "/images/products/tee.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Bypass Lines", "Utility Drop-Downs", "Instrumentation Offtakes"],
   },
   {
@@ -472,7 +472,7 @@ const rawFamilies = [
     name: "Butt Weld End Cap",
     description: "End cap butt weld untuk menutup ujung pipa permanen dengan metode pengelasan.",
     image: "/images/products/blind-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Pipe Termination", "Header Headers", "Pressure Vessel Ends"],
   },
   {
@@ -481,7 +481,7 @@ const rawFamilies = [
     name: "Butt Weld Stub End",
     description: "Stub end butt weld untuk dikombinasikan dengan lap joint/loose flange.",
     image: "/images/products/lap-joint-flange.png",
-    materials: "SS304 / SS316 / SS316L",
+    materials: "SS304 / SS316 ",
     applications: ["Lap Joint Flanged Piping", "Retrofit Maintenance Lines", "Piping Alignments"],
   },
 
@@ -492,7 +492,7 @@ const rawFamilies = [
     name: "Socket Welded Elbow 90",
     description: "Elbow socket weld 90 derajat untuk perpipaan bertekanan tinggi (Class 3000/6000).",
     image: "/images/products/elbow.png",
-    materials: "SS304 / SS316 / F304 / F316",
+    materials: "SS304 / SS316 ",
     applications: ["High Pressure Hydraulic Lines", "Chemical Process Lines", "Lube Oil Piping"],
   },
   {

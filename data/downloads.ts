@@ -54,7 +54,7 @@ export const downloads: Download[] = [
     id: "D008",
     title: "Stainless Steel Grades Quick Reference",
     category: "Materials",
-    description: "Ringkasan grade SS304, SS316, SS316L, dan rekomendasi penggunaan.",
+    description: "Ringkasan grade SS304, SS316 dan rekomendasi penggunaan.",
     url: "https://peroniks.com/file/pdf/stainless-grades.pdf",
   },
   {
