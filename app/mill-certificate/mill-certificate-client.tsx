@@ -66,6 +66,7 @@ export function MillCertificateClient() {
   const [suggestions, setSuggestions] = useState<string[]>([]);
   const [showFullChem, setShowFullChem] = useState(false);
   const [showAdditionalInfo, setShowAdditionalInfo] = useState(false);
+  const [generatingPdf, setGeneratingPdf] = useState(false);
 
   // Dynamic sample heat numbers from the first 5 records
   const sampleHeatNumbers = (demoRecords as RecordType[]).slice(0, 5).map((r) => r.heatNumber);
@@ -109,8 +110,19 @@ export function MillCertificateClient() {
     setShowAdditionalInfo(false); // Reset toggle
   };
 
-  const handlePdfClick = (pdfUrl: string) => {
-    window.open(pdfUrl, "_blank");
+  const handlePdfClick = async (cert: RecordType) => {
+    try {
+      setGeneratingPdf(true);
+      const { generateMtcPdfBlob } = await import("./mtc-pdf-generator");
+      const blob = await generateMtcPdfBlob(cert);
+      const url = URL.createObjectURL(blob);
+      window.open(url, "_blank");
+    } catch (err) {
+      console.error("Failed to generate PDF client-side:", err);
+      alert("Failed to generate PDF. Please try again.");
+    } finally {
+      setGeneratingPdf(false);
+    }
   };
 
   return (
@@ -357,11 +369,14 @@ export function MillCertificateClient() {
                     <div className="pt-2">
                       <button
                         type="button"
-                        onClick={() => handlePdfClick(`/api/certificate/pdf/${result.heatNumber}`)}
-                        className="w-full bg-blue-600 text-white hover:bg-blue-700 transition-all duration-200 font-technical-data text-xs uppercase tracking-wider font-bold py-4 px-8 rounded-lg active:scale-95 shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 flex items-center justify-center gap-2 cursor-pointer"
+                        disabled={generatingPdf}
+                        onClick={() => handlePdfClick(result)}
+                        className={`w-full ${generatingPdf ? 'bg-blue-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'} text-white transition-all duration-200 font-technical-data text-xs uppercase tracking-wider font-bold py-4 px-8 rounded-lg active:scale-95 shadow-md shadow-blue-500/10 hover:shadow-blue-500/20 flex items-center justify-center gap-2 cursor-pointer`}
                       >
-                        <span className="material-symbols-outlined text-sm">picture_as_pdf</span>
-                        📄 DOWNLOAD MTC PDF
+                        <span className="material-symbols-outlined text-sm">
+                          {generatingPdf ? "sync" : "picture_as_pdf"}
+                        </span>
+                        {generatingPdf ? "GENERATING PDF..." : "📄 DOWNLOAD MTC PDF"}
                       </button>
                     </div>
 
