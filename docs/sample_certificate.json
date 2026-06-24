@@ -1,0 +1,30 @@
+{
+  "certificateNumber": "QC/2025/08/022",
+  "heatNumber": "A220082501",
+  "grade": "304",
+  "specification": "ASTM A351",
+  "chemicalComposition": {
+    "C": 0.05,
+    "Si": 0.78,
+    "Mn": 0.87,
+    "P": 0.020,
+    "S": 0.009,
+    "Cr": 18.15,
+    "Ni": 8.12,
+    "Mo": 0.20
+  },
+  "mechanicalProperties": {
+    "yieldStrength": "400.00 MPa",
+    "tensileStrength": "200.00 MPa",
+    "elongation": "20.00 %",
+    "hardness": "100.00 HB"
+  },
+  "approval": {
+    "status": "APPROVED",
+    "approvedBy": {
+      "name": "Approver",
+      "email": "approver@qc.local"
+    },
+    "approvedAt": "2025-09-19T20:36:59Z"
+  }
+}
