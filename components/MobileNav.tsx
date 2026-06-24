@@ -8,6 +8,7 @@ const navItems = [
   { href: "/products", label: "Catalog" },
   { href: "/blog", label: "Technical Blog" },
   { href: "/downloads", label: "Downloads" },
+  { href: "/mill-certificate", label: "Mill Certificate" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
