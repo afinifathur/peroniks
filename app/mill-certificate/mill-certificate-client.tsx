@@ -145,11 +145,13 @@ export function MillCertificateClient() {
             <p className="font-body-lg text-slate-650 leading-relaxed text-sm md:text-base mb-8">
               Verify material authenticity using Heat Number traceability and MTC 3.1 certification records.
             </p>
+          </div>
 
+          <div className="max-w-[900px] mx-auto mt-8">
             {/* Verification Form */}
             <form onSubmit={handleVerify} className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-3">
-                <div className="relative flex-1">
+                <div className="relative flex-1 lg:flex-[73]">
                   <span className="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-slate-400 text-xl">
                     search
                   </span>
@@ -164,7 +166,7 @@ export function MillCertificateClient() {
                 </div>
                 <button
                   type="submit"
-                  className="bg-primary text-white hover:bg-secondary transition-all duration-200 font-technical-data text-xs uppercase tracking-wider font-bold py-3.5 px-6 rounded-lg active:scale-95 shadow-md shadow-primary/10 hover:shadow-primary/20 flex items-center justify-center gap-2 cursor-pointer"
+                  className="bg-primary text-white hover:bg-secondary transition-all duration-200 font-technical-data text-xs uppercase tracking-wider font-bold py-3.5 px-6 rounded-lg active:scale-95 shadow-md shadow-primary/10 hover:shadow-primary/20 flex items-center justify-center gap-2 cursor-pointer lg:flex-[27]"
                 >
                   <span className="material-symbols-outlined text-sm">verified_user</span>
                   Verify Certificate
@@ -172,7 +174,7 @@ export function MillCertificateClient() {
               </div>
               
               {/* Examples Quick Fill */}
-              <div className="flex items-center gap-2 flex-wrap">
+              <div className="flex items-center gap-2 flex-wrap lg:justify-center">
                 <span className="text-xs text-slate-500 font-body">Sample Heat Numbers:</span>
                 {sampleHeatNumbers.map((heatNum) => (
                   <button
