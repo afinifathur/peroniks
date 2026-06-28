@@ -7,7 +7,7 @@ export function Hero() {
     <section className="relative min-h-[600px] md:h-[680px] flex items-center overflow-hidden py-12 md:py-0">
       <Image
         alt="Industrial facility background"
-        src="/images/factory-hero.png"
+        src="/images/company/factory/homepage-hero-factory.png"
         fill
         priority
         className="object-cover object-center scale-105"
